@@ -1,0 +1,1044 @@
+{
+  "lion": {
+    "region": "Africa · south of the Sahara",
+    "diet": "Carnivore",
+    "size": "Length 1.4–2.5 m",
+    "lifespan": "About 10–14 years in the wild",
+    "description": "A low roar carries across the grassland at dusk. Lions are the only cats that commonly live in stable groups. Lionesses hunt together and share the care of their cubs.",
+    "fact": "Under suitable conditions, a lion's roar can travel about 8 km, contacting companions and announcing its territory."
+  },
+  "elephant": {
+    "region": "Africa · east and south",
+    "diet": "Herbivore",
+    "size": "Shoulder height 3–4 m",
+    "lifespan": "About 60–70 years",
+    "description": "The African savanna elephant is the largest living land animal. Herds are usually led by experienced females. By shaping woodland and dispersing seeds, elephants create space for other life.",
+    "fact": "Elephants communicate with low-frequency sounds and can detect vibrations travelling through the ground."
+  },
+  "giraffe": {
+    "region": "Africa · savannas",
+    "diet": "Herbivore",
+    "size": "Height 4.3–5.7 m",
+    "lifespan": "About 20–25 years in the wild",
+    "description": "Giraffes use long, flexible tongues to reach leaves high in the trees. Their height helps them spot distant danger and reduces competition with shorter plant-eaters. Each coat pattern is unique.",
+    "fact": "Like humans, giraffes usually have just seven neck vertebrae, but each one is much longer."
+  },
+  "zebra": {
+    "region": "Africa · eastern grasslands",
+    "diet": "Herbivore",
+    "size": "Length 2.2–2.5 m",
+    "lifespan": "About 20 years in the wild",
+    "description": "Zebras are prominent participants in Africa's great migrations. Their ability to eat tough grasses helps open grazing areas for other herbivores that follow.",
+    "fact": "Experiments suggest that zebra stripes reduce the likelihood of some biting flies landing on them."
+  },
+  "cheetah": {
+    "region": "Africa · open grasslands",
+    "diet": "Carnivore",
+    "size": "Length 1.1–1.5 m",
+    "lifespan": "About 10–12 years in the wild",
+    "description": "A light frame, flexible spine and long legs make the cheetah an exceptional sprinter. It catches prey in short bursts of speed, using its long tail to help make sharp turns.",
+    "fact": "The black tear-like markings on a cheetah's face are among its most recognizable features."
+  },
+  "rhino": {
+    "region": "Africa · southern grasslands",
+    "diet": "Herbivore",
+    "size": "Length 3.4–4.2 m",
+    "lifespan": "About 40–50 years",
+    "description": "The white rhinoceros crops grass with its broad, square lips. Despite its imposing size, its survival depends strongly on protecting habitats and remaining populations.",
+    "fact": "Rhino horn consists mainly of keratin, the same type of structural protein found in human hair and nails."
+  },
+  "tiger": {
+    "region": "Asia · forests and grasslands",
+    "diet": "Carnivore",
+    "size": "Length 1.4–2.8 m",
+    "lifespan": "About 10–15 years in the wild",
+    "description": "A tiger's stripes break up its outline in dappled forest light. Usually solitary, this top predator relies on landscapes that can sustain a rich food web.",
+    "fact": "Tigers are excellent swimmers and often cool off in water during hot weather.",
+    "chinaRegion": "Northeastern forests, including Jilin and Heilongjiang"
+  },
+  "panda": {
+    "region": "Asia · China's mountain bamboo forests",
+    "diet": "Mainly bamboo",
+    "size": "Length 1.2–1.9 m",
+    "lifespan": "About 15–20 years in the wild",
+    "description": "Giant pandas spend much of the day feeding in misty mountain bamboo forests. They retain the digestive system of a carnivore while following a diet dominated by bamboo.",
+    "fact": "A panda's extra thumb is actually an enlarged wrist bone that helps it grip bamboo.",
+    "chinaRegion": "Mountain bamboo forests in Sichuan, Shaanxi and Gansu"
+  },
+  "gorilla": {
+    "region": "Africa · central and western rainforests",
+    "diet": "Mainly plants",
+    "size": "Standing height about  1.3–1.8 m",
+    "lifespan": "About 35–40 years",
+    "description": "Western gorillas live in family groups in dense rainforest, feeding on fruits, leaves and stems. By dispersing seeds, they help the forest regenerate.",
+    "fact": "Each gorilla has a distinctive nose pattern that researchers can use to identify individuals."
+  },
+  "orangutan": {
+    "region": "Asia · Borneo",
+    "diet": "Mainly fruit",
+    "size": "Length about  1–1.4 m",
+    "lifespan": "About 35–45 years in the wild",
+    "description": "Bornean orangutans move slowly through the canopy and spend most of their lives in trees. Forest fragmentation is steadily reducing and separating their habitat.",
+    "fact": "Orangutans bend and weave branches into nests, usually making a fresh sleeping nest each night."
+  },
+  "redfox": {
+    "region": "Northern Hemisphere · woodland and open country",
+    "diet": "Omnivore",
+    "size": "Length 45–90 cm",
+    "lifespan": "About 3–5 years in the wild",
+    "description": "With acute hearing and remarkable adaptability, red foxes find food and shelter from forest edges to urban green spaces.",
+    "fact": "To catch small mammals beneath snow, a fox may leap into the air and dive headfirst into the snow.",
+    "chinaRegion": "Northern China and plateau regions"
+  },
+  "brown-bear": {
+    "region": "North America and Eurasia",
+    "diet": "Omnivore",
+    "size": "Length 1.4–2.8 m",
+    "lifespan": "About 20–30 years in the wild",
+    "description": "Brown bears roam coniferous forests, river valleys and mountains. Their diet changes with the seasons, with berries, roots, insects and fish all helping build energy reserves.",
+    "fact": "During hibernation, a brown bear's heart rate and metabolism fall as it lives on stored fat.",
+    "chinaRegion": "Xinjiang, northeastern China and the Qinghai–Tibet Plateau"
+  },
+  "blue-whale": {
+    "region": "Worldwide · open oceans",
+    "diet": "Mainly krill",
+    "size": "Length about  24–30 m",
+    "lifespan": "About 80–90 years",
+    "description": "The blue whale is the largest animal known to have lived on Earth. It feeds on tiny krill, migrates across vast oceans and communicates with low-frequency calls.",
+    "fact": "A blue whale's heart can weigh hundreds of kilograms and beats very slowly during deep dives."
+  },
+  "orca": {
+    "region": "Worldwide · coastal and open waters",
+    "diet": "Carnivore",
+    "size": "Length about  5–9 m",
+    "lifespan": "Several decades; females usually live longer",
+    "description": "Orcas have complex social bonds. Different populations develop distinct diets and hunting traditions, supported by close cooperation within their families.",
+    "fact": "Orca families have distinctive combinations of calls that can pass between generations, much like dialects."
+  },
+  "dolphin": {
+    "region": "Worldwide · temperate and tropical seas",
+    "diet": "Fish and cephalopods",
+    "size": "Length about  2–4 m",
+    "lifespan": "About 40–60 years",
+    "description": "Bottlenose dolphins use echolocation to sense their surroundings and can cooperate while hunting. Their changing social relationships are supported by a rich range of communication.",
+    "fact": "Bottlenose dolphins produce individually distinctive signature whistles.",
+    "chinaRegion": "Southeastern coastal waters of China"
+  },
+  "whale-shark": {
+    "region": "Worldwide · warm tropical seas",
+    "diet": "Plankton and small fish",
+    "size": "Typical length  6–12 m",
+    "lifespan": "Possibly over 80 years",
+    "description": "The largest living fish, the whale shark cruises warm waters while filtering small food particles. Its enormous body is covered in a distinctive pattern of pale spots.",
+    "fact": "The spots behind a whale shark's gills help researchers identify and track individuals from photographs.",
+    "chinaRegion": "Warm waters including the South China Sea"
+  },
+  "sea-turtle": {
+    "region": "Worldwide · tropical and subtropical seas",
+    "diet": "Adults mainly eat seagrass and algae",
+    "size": "Carapace length about  80–120 cm",
+    "lifespan": "Over 60 years",
+    "description": "Green turtles travel between seagrass beds, reefs and breeding beaches. Mature turtles can migrate long distances, connecting coastal habitats with the open ocean.",
+    "fact": "The 2025 global assessment reclassified green turtles as Least Concern, but some regional populations still face serious threats.",
+    "chinaRegion": "South China Sea, East China Sea and nearby waters"
+  },
+  "manta": {
+    "region": "Worldwide · tropical and temperate seas",
+    "diet": "Plankton",
+    "size": "Fin span up to about  7 m",
+    "lifespan": "Over 40 years",
+    "description": "Oceanic manta rays glide through the water on broad pectoral fins. Fins beside the head help channel plankton-rich water toward the mouth.",
+    "fact": "Individual manta rays have different dark markings on their undersides, helping researchers recognize them."
+  },
+  "polar-bear": {
+    "region": "Arctic · around the Arctic Ocean",
+    "diet": "Mainly seals",
+    "size": "Length about  1.8–2.8 m",
+    "lifespan": "About 20–25 years in the wild",
+    "description": "Polar bears depend on sea ice to hunt seals. Thick fur and fat protect them from cold, while seasonal ice changes govern their hunting and resting patterns.",
+    "fact": "Polar bears have black skin. Their hairs contain no white pigment; the coat looks white because it scatters light."
+  },
+  "emperor-penguin": {
+    "region": "Antarctica · sea ice and coasts",
+    "diet": "Fish, krill and squid",
+    "size": "Height about  1.1–1.2 m",
+    "lifespan": "About 15–20 years in the wild",
+    "description": "Male emperor penguins balance eggs on their feet beneath a warm brood pouch during the Antarctic winter. Huddling birds slowly change positions so each gets a chance to warm up.",
+    "fact": "Emperor penguins can dive beyond 500 metres, making them among the deepest-diving birds."
+  },
+  "arctic-fox": {
+    "region": "Arctic · tundra",
+    "diet": "Omnivore",
+    "size": "Length about  45–70 cm",
+    "lifespan": "About 3–6 years in the wild",
+    "description": "Small ears, a short muzzle and dense winter fur reduce heat loss. Many Arctic foxes change coat colour with the seasons, blending into snow or summer tundra.",
+    "fact": "Fur covers the soles of an Arctic fox's feet, providing warmth and helping it travel over ice and snow."
+  },
+  "walrus": {
+    "region": "Arctic · shallow seas and floating ice",
+    "diet": "Mainly bottom-dwelling molluscs",
+    "size": "Length about  2.2–3.6 m",
+    "lifespan": "About 30–40 years",
+    "description": "Walruses search the shallow seabed with sensitive whiskers. Their long tusks serve in social displays and can help them haul out onto ice.",
+    "fact": "Nerve-rich whiskers help walruses locate shellfish by touch in murky water."
+  },
+  "reindeer": {
+    "region": "Northern Hemisphere · tundra and boreal forest",
+    "diet": "Herbivore",
+    "size": "Length about  1.6–2.3 m",
+    "lifespan": "About 10–15 years in the wild",
+    "description": "Reindeer hooves change in firmness with the seasons to cope with soft tundra and hard ice. Some populations make exceptionally long land migrations.",
+    "fact": "Reindeer are unusual among deer because both sexes normally grow antlers."
+  },
+  "snowy-owl": {
+    "region": "Arctic · open tundra",
+    "diet": "Carnivore",
+    "size": "Wingspan about  1.3–1.5 m",
+    "lifespan": "Over 10 years in the wild",
+    "description": "Snowy owls nest on open Arctic tundra, where pale plumage blends into snowy surroundings. They can hunt in daylight and often depend on lemmings and other small mammals.",
+    "fact": "Thick feathers cover a snowy owl's toes, acting like natural insulated boots."
+  },
+  "fennec": {
+    "region": "Africa · Sahara Desert",
+    "diet": "Omnivore",
+    "size": "Length about  24–41 cm",
+    "lifespan": "About 10 years in the wild",
+    "description": "Large ears help fennec foxes lose heat and detect faint sounds. They shelter in burrows by day and explore the desert at night.",
+    "fact": "The fennec is the smallest canid. Fur on its soles protects its feet from hot sand."
+  },
+  "camel": {
+    "region": "Asia · deserts of China and Mongolia",
+    "diet": "Herbivore",
+    "size": "Shoulder height about  1.8–2.3 m",
+    "lifespan": "About 40 years",
+    "description": "The wild Bactrian camel is a separate species from the domestic two-humped camel. It travels far through dry deserts with extreme temperature swings to find sparse plants and water.",
+    "fact": "Camel humps store fat, not water. The fat provides energy when food is scarce.",
+    "chinaRegion": "Deserts of Xinjiang and Gansu"
+  },
+  "meerkat": {
+    "region": "Africa · arid southern regions",
+    "diet": "Mainly insects and other small animals",
+    "size": "Length about  25–35 cm",
+    "lifespan": "About 6–8 years in the wild",
+    "description": "Meerkat families forage in sandy habitats while sentries watch for danger. Their varied calls communicate information about the type and proximity of threats.",
+    "fact": "Adults gradually change the condition of scorpions given to pups, helping youngsters learn to handle dangerous prey."
+  },
+  "oryx": {
+    "region": "Asia · Arabian Peninsula",
+    "diet": "Herbivore",
+    "size": "Shoulder height about  1 m",
+    "lifespan": "About 15–20 years",
+    "description": "Pale fur reflects sunlight as the Arabian oryx moves through desert landscapes. Once extinct in the wild, it has returned through captive breeding and reintroduction.",
+    "fact": "The Arabian oryx is a notable conservation recovery, moving from Extinct in the Wild to Vulnerable."
+  },
+  "addax": {
+    "region": "Africa · Sahara Desert",
+    "diet": "Herbivore",
+    "size": "Shoulder height about  95–115 cm",
+    "lifespan": "About 20 years",
+    "description": "Broad hooves support the addax on loose sand, while twisted horns give it a distinctive outline. Wild populations are now extremely small and urgently need protection.",
+    "fact": "Addax obtain much of their water from food and are highly adapted to extreme dryness."
+  },
+  "ostrich": {
+    "region": "Africa · dry grasslands and semi-desert",
+    "diet": "Omnivore, mainly plants",
+    "size": "Height about  2–2.8 m",
+    "lifespan": "About 30–40 years in the wild",
+    "description": "Ostriches cannot fly, but powerful legs carry them rapidly across open ground. Long necks and keen eyesight help them spot distant danger.",
+    "fact": "An ostrich has only two toes on each foot, an adaptation suited to fast running."
+  },
+  "flamingo": {
+    "region": "Africa, southern Europe and southern Asia · wetlands",
+    "diet": "Small aquatic organisms",
+    "size": "Height about  1.1–1.5 m",
+    "lifespan": "Over 30 years",
+    "description": "Greater flamingos turn their heads upside down in shallow water, using specialized bills to filter food. Their flocks colour salt lakes and estuaries pink.",
+    "fact": "Flamingos acquire their pink colour from carotenoid pigments in their food."
+  },
+  "hippo": {
+    "region": "Africa · rivers and lakes",
+    "diet": "Mainly grasses",
+    "size": "Length about  3–5 m",
+    "lifespan": "About 40–50 years",
+    "description": "Hippos keep cool in water by day and graze on land at night. Eyes, ears and nostrils sit high on the head, allowing them to stay alert while mostly submerged.",
+    "fact": "The reddish-orange fluid secreted by hippo skin helps protect it; it is not bloody sweat."
+  },
+  "crocodile": {
+    "region": "Africa · rivers, lakes and swamps",
+    "diet": "Carnivore",
+    "size": "Length usually  3–5 m",
+    "lifespan": "Over 50 years",
+    "description": "Nile crocodiles wait quietly near water and propel themselves with strong tails. Females guard nests and help newly hatched young reach the water.",
+    "fact": "Crocodiles can gently carry hatchlings in their mouths to transport them to water."
+  },
+  "otter": {
+    "region": "Eurasia · rivers and coasts",
+    "diet": "Mainly fish",
+    "size": "Length about  55–95 cm",
+    "lifespan": "About 5–10 years in the wild",
+    "description": "Eurasian otters swim with streamlined bodies and dense fur that traps insulating air. Clean water, fish and sheltered banks are essential to their survival.",
+    "fact": "Otters use the scent of their droppings to communicate and mark frequently used areas.",
+    "chinaRegion": "Rivers and coastal areas across China"
+  },
+  "capybara": {
+    "region": "South America · rivers and wetlands",
+    "diet": "Herbivore",
+    "size": "Length about  1–1.3 m",
+    "lifespan": "About 6–10 years in the wild",
+    "description": "The capybara is the largest living rodent. It often lives in groups near water, using partly webbed feet to swim and escaping into the water when threatened.",
+    "fact": "Its eyes, ears and nostrils sit near the top of the head, helping it see and breathe while swimming."
+  },
+  "crane": {
+    "region": "Asia · eastern wetlands",
+    "diet": "Omnivore",
+    "size": "Height about  1.5 m",
+    "lifespan": "About 20–30 years in the wild",
+    "description": "Red-crowned cranes walk through marshes and shallow water, performing paired dances and calls. Connected wetlands and seasonal water levels are important to breeding and winter survival.",
+    "fact": "The red crown is bare skin, not red feathers.",
+    "chinaRegion": "Breeds in northeastern China; winters in Jiangsu and other areas"
+  },
+  "african-buffalo": {
+    "region": "Africa · east and south",
+    "diet": "Herbivore",
+    "size": "Mass about  300–900 kg",
+    "lifespan": "About 15–25 years in the wild",
+    "description": "African buffalo move between grasslands, open woodland and water, often in large herds. Mature males have heavy horn bases; females and calves benefit from collective vigilance.",
+    "fact": "Buffalo need to drink regularly, so dry-season water supplies influence their movements."
+  },
+  "wildebeest": {
+    "region": "Africa · Serengeti",
+    "diet": "Herbivore",
+    "size": "Mass about  120–290 kg",
+    "lifespan": "About 15–20 years in the wild",
+    "description": "Fresh grass following the rains draws wildebeest across the plains. Some East African populations make vast seasonal migrations, crossing rivers and supporting predators and scavengers.",
+    "fact": "Wildebeest calves can stand and walk soon after birth, helping them keep up with the herd."
+  },
+  "impala": {
+    "region": "Africa · southern wooded savannas",
+    "diet": "Herbivore",
+    "size": "Shoulder height about  70–95 cm",
+    "lifespan": "About 10–15 years in the wild",
+    "description": "Impalas feed where woodland meets open grassland, changing the balance of grass and leaves in their diet with the seasons. Curved male horns and black rump markings help identify them.",
+    "fact": "Alarmed impalas leap repeatedly and change direction to escape pursuit."
+  },
+  "thomsons-gazelle": {
+    "region": "Africa · Kenya and Tanzania",
+    "diet": "Herbivore",
+    "size": "Mass about  15–35 kg",
+    "lifespan": "About 10–15 years in the wild",
+    "description": "A bold black stripe marks the flank of Thomson's gazelle. These East African grazers favour fresh short grass and often use areas already cropped by larger herbivores.",
+    "fact": "Gazelles sometimes spring into the air with all four feet together, a behaviour called stotting."
+  },
+  "spotted-hyena": {
+    "region": "Africa · south of the Sahara",
+    "diet": "Carnivore",
+    "size": "Mass about  40–85 kg",
+    "lifespan": "About 12–20 years in the wild",
+    "description": "Spotted hyenas are cooperative hunters as well as scavengers. They live in complex clans where females generally rank above males, using calls and scent to stay connected.",
+    "fact": "Despite their dog-like appearance, hyenas belong to the cat-like branch of carnivores."
+  },
+  "african-wild-dog": {
+    "region": "Africa · south and east",
+    "diet": "Carnivore",
+    "size": "Mass about  18–36 kg",
+    "lifespan": "About 10 years in the wild",
+    "description": "African wild dogs hunt cooperatively across large landscapes, wearing coats patterned in black, brown and white. Habitat fragmentation and disease threaten these highly social animals.",
+    "fact": "Every wild dog's coat pattern is different, allowing individuals to be recognized."
+  },
+  "secretarybird": {
+    "region": "Africa · eastern open grasslands",
+    "diet": "Carnivore",
+    "size": "Height about  1.2–1.4 m",
+    "lifespan": "Over 20 years in captivity",
+    "description": "With long legs and a crest of quill-like feathers, secretarybirds forage mainly on foot. They stamp rapidly to subdue insects, small vertebrates and snakes.",
+    "fact": "Secretarybirds can fly despite their terrestrial hunting style, and often nest in treetops."
+  },
+  "american-bison": {
+    "region": "North America · Great Plains",
+    "diet": "Herbivore",
+    "size": "Mass about  350–1,000 kg",
+    "lifespan": "About 15–20 years in the wild",
+    "description": "American bison once crossed the plains in enormous herds. Grazing, trampling and wallowing create varied patches that benefit grassland plants, insects and birds.",
+    "fact": "A bison's shoulder hump is supported by strong muscles and elongated projections from its thoracic vertebrae."
+  },
+  "pronghorn": {
+    "region": "North America · western grasslands",
+    "diet": "Herbivore",
+    "size": "Shoulder height about  80–100 cm",
+    "lifespan": "About 10–15 years in the wild",
+    "description": "Pronghorn rely on keen vision and sustained running in open country. Roads and fences can block migration routes, making connected landscapes especially important.",
+    "fact": "Pronghorn horns have a bony core, while their outer sheaths are shed and renewed periodically."
+  },
+  "red-kangaroo": {
+    "region": "Oceania · inland Australia",
+    "diet": "Herbivore",
+    "size": "Male mass up to about  90 kg",
+    "lifespan": "About 8–12 years in the wild",
+    "description": "Red kangaroos inhabit arid and semi-arid open country, travelling with powerful hind-leg hops. They often feed around dawn, dusk or night to avoid daytime heat.",
+    "fact": "When moving slowly, a kangaroo uses its tail with its forelimbs to support and push its body forward."
+  },
+  "leopard": {
+    "region": "Africa and Asia · woodlands",
+    "diet": "Carnivore",
+    "size": "Length about  0.9–1.9 m (excluding tail)",
+    "lifespan": "About 10–15 years in the wild",
+    "description": "Leopards adapt to habitats from rainforest to dry mountains. Rosette markings break up their outline. Usually solitary, they climb well and often carry prey into trees.",
+    "fact": "A black panther is usually a dark-coloured leopard or jaguar; its spots can still be visible.",
+    "chinaRegion": "Mountains of northern and southwestern China"
+  },
+  "jaguar": {
+    "region": "South America · Amazon and Pantanal",
+    "diet": "Carnivore",
+    "size": "Mass about  45–120 kg",
+    "lifespan": "About 12–15 years in the wild",
+    "description": "The largest cat in the Americas, the jaguar often lives among rivers, wetlands and forests. It swims well and eats mammals, turtles and caimans.",
+    "fact": "Jaguar rosettes often contain small black spots, helping distinguish them from leopard markings."
+  },
+  "cougar": {
+    "region": "Americas · mountain forests and scrub",
+    "diet": "Carnivore",
+    "size": "Length about  1–2 m (excluding tail)",
+    "lifespan": "About 8–13 years in the wild",
+    "description": "Cougars range from Canadian forests to South American mountains. They use terrain for cover while stalking prey, with deer often an important food source.",
+    "fact": "Cougars cannot roar like lions, but can purr, hiss and make scream-like calls."
+  },
+  "eurasian-lynx": {
+    "region": "Eurasia · northern forests",
+    "diet": "Carnivore",
+    "size": "Mass about  18–30 kg",
+    "lifespan": "About 10–15 years in the wild",
+    "description": "Eurasian lynxes have black ear tufts and short, black-tipped tails. They roam forests alone, ambushing roe deer and other small to medium-sized animals.",
+    "fact": "Broad paws help lynxes walk over soft snow.",
+    "chinaRegion": "Northeastern China, Xinjiang and the Qinghai–Tibet Plateau"
+  },
+  "gray-wolf": {
+    "region": "Northern Hemisphere · forests and open country",
+    "diet": "Carnivore",
+    "size": "Mass usually about  25–60 kg",
+    "lifespan": "About 6–13 years in the wild",
+    "description": "Wolf packs often consist of parents and their offspring of different ages. They cooperate in territory patrols, pup care and hunting, adapting their diet to local conditions.",
+    "fact": "Howling helps wolves contact distant pack members and signal territory to neighbouring packs.",
+    "chinaRegion": "Inner Mongolia, Xinjiang and the Qinghai–Tibet Plateau"
+  },
+  "red-panda": {
+    "region": "Asia · eastern Himalayan forests",
+    "diet": "Mainly bamboo",
+    "size": "Length about  50–65 cm (excluding tail)",
+    "lifespan": "About 8–10 years in the wild",
+    "description": "Red pandas climb and rest in cool mountain forests, feeding mainly on bamboo leaves. Connecting fragmented forests is an important part of their conservation.",
+    "fact": "The long tail helps balance and can wrap around the body for warmth.",
+    "chinaRegion": "Southeastern Tibet and neighbouring forests"
+  },
+  "koala": {
+    "region": "Oceania · eastern Australia",
+    "diet": "Herbivore · eucalyptus leaves",
+    "size": "Mass about  4–15 kg",
+    "lifespan": "About 10–15 years in the wild",
+    "description": "Koalas depend on eucalyptus woodland and select particular trees and leaves. Their low-energy, hard-to-digest food leads to long resting periods; connected forests support feeding and breeding.",
+    "fact": "Koalas are marsupials. Young develop in the pouch and later often ride on their mother's back."
+  },
+  "wombat": {
+    "region": "Oceania · southeastern Australia",
+    "diet": "Herbivore",
+    "size": "Mass about  20–35 kg",
+    "lifespan": "Up to about 15 years in the wild",
+    "description": "Stocky wombats dig long, deep burrows and usually graze during cooler nights. Other small animals may also make use of their burrows.",
+    "fact": "Wombat droppings are often roughly cube-shaped, related to differences in elasticity along the intestine."
+  },
+  "malayan-tapir": {
+    "region": "Asia · Malay Peninsula and Sumatra",
+    "diet": "Herbivore",
+    "size": "Mass about  250–350 kg",
+    "lifespan": "About 25–30 years",
+    "description": "The Malayan tapir's black-and-white pattern breaks up its outline in forest shadows. Its flexible short trunk grasps vegetation, and water offers cooling and refuge.",
+    "fact": "Young tapirs have pale stripes and spots that gradually give way to adult colouring."
+  },
+  "three-toed-sloth": {
+    "region": "Central and South America · tropical forests",
+    "diet": "Herbivore",
+    "size": "Length about  40–80 cm",
+    "lifespan": "Wild lifespan poorly documented",
+    "description": "Sloths move slowly while hanging from the canopy, living on low-energy leaves. Their fur can support algae and small arthropods, creating a tiny web of ecological relationships.",
+    "fact": "Although awkward on the ground, sloths can swim across waterways."
+  },
+  "giant-anteater": {
+    "region": "South America · woodlands and grasslands",
+    "diet": "Ants and termites",
+    "size": "Total length about  1.8–2.2 m",
+    "lifespan": "About 14 years in the wild",
+    "description": "Giant anteaters open ant nests with strong claws and feed with long, sticky tongues. They rest in woodland and forage in open country, where fires and roads pose threats.",
+    "fact": "Giant anteaters have no teeth; food is processed further in the stomach."
+  },
+  "chimpanzee": {
+    "region": "Africa · central and western forests",
+    "diet": "Omnivore",
+    "size": "Mass about  30–60 kg",
+    "lifespan": "Over 40 years in the wild",
+    "description": "Chimpanzees live in complex communities that split into smaller feeding groups and reunite. Different communities have distinct traditions in tool use and behaviour.",
+    "fact": "Some chimpanzees modify twigs to fish termites out of their nests."
+  },
+  "mandrill": {
+    "region": "Africa · Gabon and Cameroon",
+    "diet": "Omnivore",
+    "size": "Male mass about  20–35 kg",
+    "lifespan": "About 20 years in the wild",
+    "description": "Adult male mandrills have striking red-and-blue faces. Mandrills mainly forage on the forest floor for fruits, seeds and small animals, climbing to rest or escape danger.",
+    "fact": "Cheek pouches allow mandrills to store food temporarily and eat it later in a suitable spot."
+  },
+  "ring-tailed-lemur": {
+    "region": "Africa · southern Madagascar",
+    "diet": "Omnivore",
+    "size": "Mass about  2–3 kg",
+    "lifespan": "About 15–16 years in the wild",
+    "description": "Native only to Madagascar, ring-tailed lemurs are known for their black-and-white tails. They live in groups in dry woodland and scrub, where females usually dominate.",
+    "fact": "Ring-tailed lemurs often sit facing the sun with their bodies spread out to warm up on cool mornings."
+  },
+  "toco-toucan": {
+    "region": "South America · Brazilian forest edges",
+    "diet": "Omnivore, mainly fruit",
+    "size": "Total length about  55–65 cm",
+    "lifespan": "About 20 years in captivity",
+    "description": "The toco toucan's enormous orange-yellow bill is unmistakable. It frequents forest edges, savannas and open woodland, dispersing seeds after eating fruit.",
+    "fact": "The lightweight bill also helps release body heat through changes in blood flow."
+  },
+  "scarlet-macaw": {
+    "region": "Central and South America · lowland rainforests",
+    "diet": "Herbivore · fruits and seeds",
+    "size": "Total length about  80–90 cm",
+    "lifespan": "Over 40 years in captivity",
+    "description": "Scarlet macaws fly above the rainforest in red, yellow and blue, calling loudly through the canopy. They often travel in pairs and need cavities in mature trees to breed.",
+    "fact": "A macaw's strong bill opens hard fruits and also helps it climb."
+  },
+  "harpy-eagle": {
+    "region": "Central and South America · tropical rainforests",
+    "diet": "Carnivore",
+    "size": "Wingspan about  1.8–2.2 m",
+    "lifespan": "About 25–35 years",
+    "description": "Harpy eagles hunt tree-dwelling animals such as sloths and monkeys. Broad, relatively short wings suit forest flight, and tall nest trees are crucial to breeding.",
+    "fact": "Harpy eagles have long breeding cycles, with parents caring for a single chick for many months."
+  },
+  "okapi": {
+    "region": "Africa · northeastern Congo Basin",
+    "diet": "Herbivore",
+    "size": "Shoulder height about  1.5 m",
+    "lifespan": "About 30 years in captivity",
+    "description": "Okapis live in humid Congolese forests, where pale leg stripes blend with patches of light. They gather leaves, shoots and buds with long tongues.",
+    "fact": "Despite zebra-like leg stripes, okapis belong to the giraffe family."
+  },
+  "humpback-whale": {
+    "region": "Worldwide oceans · seasonal migrations",
+    "diet": "Carnivore · krill and small fish",
+    "size": "Length about  12–16 m",
+    "lifespan": "About 50–80 years",
+    "description": "Humpback whales feed at high latitudes, and many migrate to warmer breeding waters. Long pectoral fins, breaching and complex songs make them distinctive.",
+    "fact": "Some humpbacks cooperate to surround fish with bubbles before feeding together."
+  },
+  "sperm-whale": {
+    "region": "Worldwide oceans · deep waters",
+    "diet": "Carnivore · squid and other prey",
+    "size": "Male length about  15–18 m",
+    "lifespan": "About 60–70 years",
+    "description": "Known for large heads and deep dives, sperm whales hunt squid in dark waters. Females and young live in stable social groups and communicate with rhythmic clicks.",
+    "fact": "Sperm whales use echolocation to find prey and are the largest living toothed whales."
+  },
+  "beluga": {
+    "region": "Arctic Ocean · coastal waters",
+    "diet": "Carnivore",
+    "size": "Length about  3–5.5 m",
+    "lifespan": "About 35–50 years",
+    "description": "Belugas use Arctic and subarctic shallows and estuaries. Adults are creamy white, lack a dorsal fin and have more flexible necks than most whales.",
+    "fact": "Their varied whistles, calls and clicks have earned them the nickname sea canaries."
+  },
+  "narwhal": {
+    "region": "Arctic Ocean · around Greenland",
+    "diet": "Carnivore",
+    "size": "Length about  4–5 m (excluding tusk)",
+    "lifespan": "Over 50 years",
+    "description": "Narwhals dive through cold Arctic waters for fish and squid. Males often have a long, spiralling tusk projecting forward.",
+    "fact": "The tusk is an elongated tooth, and some females also grow one."
+  },
+  "dugong": {
+    "region": "Indian and western Pacific oceans · seagrass beds",
+    "diet": "Herbivore · seagrass",
+    "size": "Length about  2.4–3 m",
+    "lifespan": "About 60–70 years",
+    "description": "Dugongs graze seagrass with downward-facing snouts. Their survival depends on shallow seagrass meadows, which face degradation, fishing-net entanglement and vessel collisions.",
+    "fact": "Dugongs have forked tail flukes, unlike the rounded paddle-shaped tails of manatees."
+  },
+  "harbor-seal": {
+    "region": "North Atlantic and North Pacific · coasts",
+    "diet": "Carnivore",
+    "size": "Length about  1.2–1.9 m",
+    "lifespan": "About 20–30 years",
+    "description": "Harbour seals rest on intertidal rocks and sandbanks, returning to the water to feed. Their individual spot patterns help observers recognize them over time.",
+    "fact": "Sensitive whiskers detect water disturbances left by swimming fish."
+  },
+  "california-sea-lion": {
+    "region": "North America · Pacific coast",
+    "diet": "Carnivore",
+    "size": "Male mass about  200–400 kg",
+    "lifespan": "About 15–25 years in the wild",
+    "description": "California sea lions gather on islands and beaches along the western coast, often barking loudly. Strong front flippers propel them through water, and they move readily on land.",
+    "fact": "Sea lions have visible external ear flaps and can rotate their rear flippers under the body to walk."
+  },
+  "great-white-shark": {
+    "region": "Worldwide · temperate seas",
+    "diet": "Carnivore",
+    "size": "Length usually about  4–6 m",
+    "lifespan": "Possibly over 70 years",
+    "description": "Great white sharks travel long distances between coastal and offshore waters, with diets changing as they mature. These large predators play important roles in marine food webs.",
+    "fact": "Great white sharks can keep parts of their bodies warmer than the surrounding seawater."
+  },
+  "scalloped-hammerhead": {
+    "region": "Tropical and temperate seas",
+    "diet": "Carnivore",
+    "size": "Length usually about  2–3.5 m",
+    "lifespan": "About 20–30 years",
+    "description": "Scalloped hammerheads have broad, flattened heads. Young use shallow nursery areas, while adults sometimes gather near seamounts. Overfishing and bycatch have severely reduced many populations.",
+    "fact": "The expanded head spreads sensory organs across a wider area, helping the shark explore its surroundings."
+  },
+  "clownfish": {
+    "region": "Eastern Indian and western Pacific oceans · reefs",
+    "diet": "Omnivore",
+    "size": "Length up to about  11 cm",
+    "lifespan": "About 6–10 years in the wild",
+    "description": "Common clownfish live among anemone tentacles. Anemones provide shelter, while the fish's activity and waste can benefit their hosts.",
+    "fact": "The largest fish in a group is usually female. Under certain conditions, the breeding male can change sex."
+  },
+  "blue-tang": {
+    "region": "Indian and Pacific oceans · coral reefs",
+    "diet": "Omnivore",
+    "size": "Length up to about  30 cm",
+    "lifespan": "About 20 years",
+    "description": "Blue tangs have vivid blue bodies, black markings and yellow tails. They feed on plankton and algae, using reef crevices to rest and escape danger.",
+    "fact": "Sharp spines on each side of the tail base help surgeonfishes defend themselves."
+  },
+  "common-octopus": {
+    "region": "Eastern Atlantic and Mediterranean",
+    "diet": "Carnivore",
+    "size": "Arm span over  1 m",
+    "lifespan": "About 1–2 years",
+    "description": "Common octopuses explore rocky seabeds and crevices with flexible arms. They change skin colour and texture, and use camouflage, ink and jet propulsion to escape danger.",
+    "fact": "Octopuses have three hearts: two pump blood to the gills and one supplies the rest of the body."
+  },
+  "yellow-seahorse": {
+    "region": "Indian and western Pacific oceans · shallows",
+    "diet": "Carnivore · small crustaceans",
+    "size": "Length up to about  30 cm",
+    "lifespan": "Wild lifespan poorly documented",
+    "description": "Yellow seahorses grip seagrass and other structures with curling tails, sucking in tiny prey through tubular snouts. Habitat loss and collection threaten these slow-moving fish.",
+    "fact": "Male seahorses incubate embryos in brood pouches after females transfer eggs into them."
+  },
+  "chambered-nautilus": {
+    "region": "Indian and western Pacific oceans · deep reef slopes",
+    "diet": "Predator and scavenger",
+    "size": "Shell diameter usually about  15–25 cm",
+    "lifespan": "Over 20 years",
+    "description": "Chambered nautiluses move slowly near deep reef slopes, retaining external spiral shells. Internal chambers help control buoyancy, while numerous tentacles sense and capture food.",
+    "fact": "A nautilus eye resembles a pinhole camera and lacks a typical lens."
+  },
+  "muskox": {
+    "region": "Arctic · Greenland and Canada",
+    "diet": "Herbivore",
+    "size": "Mass about  180–400 kg",
+    "lifespan": "About 12–20 years in the wild",
+    "description": "Muskoxen forage for grasses, sedges and willow in cold tundra. When threatened, adults may face outward around calves to defend them.",
+    "fact": "Their dense insulating underwool is shed and replaced seasonally."
+  },
+  "arctic-hare": {
+    "region": "Arctic · Canada and Greenland",
+    "diet": "Herbivore",
+    "size": "Mass about  3–5 kg",
+    "lifespan": "About 3–5 years in the wild",
+    "description": "Short ears and thick fur help Arctic hares conserve heat in windy tundra. They dig through snow for plants and sometimes gather in large groups.",
+    "fact": "Some Arctic hares in the far north keep white coats throughout the year."
+  },
+  "arctic-tern": {
+    "region": "Arctic breeding grounds · Antarctic wintering seas",
+    "diet": "Carnivore · small fish and crustaceans",
+    "size": "Wingspan about  65–75 cm",
+    "lifespan": "Over 30 years",
+    "description": "Arctic terns travel between northern breeding grounds and the Southern Ocean, using favourable winds and productive feeding waters. Their journeys let them experience two summers each year.",
+    "fact": "Tracking studies have recorded annual journeys of tens of thousands of kilometres, sometimes approaching 100,000 km."
+  },
+  "leopard-seal": {
+    "region": "Antarctica · edges of floating ice",
+    "diet": "Carnivore",
+    "size": "Length about  2.4–3.5 m",
+    "lifespan": "About 20–25 years",
+    "description": "Leopard seals usually hunt alone near Antarctic pack ice. They eat penguins and other seals as well as large amounts of krill, depending on age and season.",
+    "fact": "Some leopard seal cheek teeth can act like a sieve to help filter krill."
+  },
+  "adelie-penguin": {
+    "region": "Antarctica · ice-free coastal areas",
+    "diet": "Carnivore · krill and fish",
+    "size": "Height about  46–71 cm",
+    "lifespan": "About 10–20 years in the wild",
+    "description": "Adélie penguins have distinctive white eye rings and breed in Antarctic coastal colonies. They catch krill and fish at sea and build pebble nests on land.",
+    "fact": "Pebble nests help keep eggs above water from melting snow."
+  },
+  "atlantic-puffin": {
+    "region": "North Atlantic · island coasts",
+    "diet": "Carnivore · small fish",
+    "size": "Length about  26–29 cm",
+    "lifespan": "Over 20 years",
+    "description": "Atlantic puffins spend much of their lives at sea, returning to island cliffs and grassy burrows to breed. They use their wings underwater and carry small fish back to their chicks.",
+    "fact": "The colourful breeding-season bill changes with the seasons, becoming smaller-looking and duller afterward."
+  },
+  "sand-cat": {
+    "region": "Africa and Asia · deserts",
+    "diet": "Carnivore",
+    "size": "Length about  40–55 cm (excluding tail)",
+    "lifespan": "Wild lifespan poorly documented",
+    "description": "Sand cats hunt at night and shelter in burrows by day. Broad ears detect faint sounds, while furred soles suit loose sand and extreme surface temperatures.",
+    "fact": "Sand cats obtain much of their water from prey and depend less on open water sources."
+  },
+  "caracal": {
+    "region": "Africa and Asia · arid scrub",
+    "diet": "Carnivore",
+    "size": "Mass about  8–20 kg",
+    "lifespan": "About 10–12 years in the wild",
+    "description": "Black ear tufts distinguish caracals in dry scrubland. Most active around dusk, dawn and night, they use explosive leaps to catch birds and other small animals.",
+    "fact": "Powerful hind legs help caracals spring toward prey above the ground."
+  },
+  "lesser-jerboa": {
+    "region": "North Africa and western Asia · deserts",
+    "diet": "Mainly seeds and plants",
+    "size": "Length about  10–12 cm (excluding tail)",
+    "lifespan": "Wild lifespan poorly documented",
+    "description": "Lesser Egyptian jerboas hop through the night on long hind legs. By day they shelter underground from the desert's heat and dryness.",
+    "fact": "The long tail works as a balance aid during leaps and sharp turns."
+  },
+  "gila-monster": {
+    "region": "North America · southwestern USA and Mexico",
+    "diet": "Carnivore",
+    "size": "Total length up to about  55 cm",
+    "lifespan": "Over 20 years",
+    "description": "Gila monsters have beaded black and pink-orange scales and spend most of their lives underground. They eat eggs and small animals and store fat in their tails.",
+    "fact": "Venom comes from glands in the lower jaw and travels along grooves in the teeth."
+  },
+  "desert-tortoise": {
+    "region": "North America · Mojave Desert",
+    "diet": "Herbivore",
+    "size": "Carapace length about  20–36 cm",
+    "lifespan": "Over 50 years",
+    "description": "Mojave desert tortoises use burrows to escape heat and cold, feeding on plants in mild weather. Their long lives and slow maturity make recovery from habitat loss difficult.",
+    "fact": "Desert tortoises can store water in their bladders to help survive drought."
+  },
+  "thorny-devil": {
+    "region": "Oceania · inland Australia",
+    "diet": "Ants and termites",
+    "size": "Total length about  15–20 cm",
+    "lifespan": "Up to about 15–20 years in the wild",
+    "description": "Thorny devils move slowly through red deserts while feeding on ants. Camouflage and spines deter predators, and tiny surface structures help collect water.",
+    "fact": "Fine channels between the scales carry water toward the mouth by capillary action."
+  },
+  "platypus": {
+    "region": "Oceania · eastern Australian rivers",
+    "diet": "Carnivore · aquatic invertebrates",
+    "size": "Total length about  40–60 cm",
+    "lifespan": "Up to about 20 years in the wild",
+    "description": "Platypuses probe riverbeds with soft bills for insect larvae, worms and crustaceans. These egg-laying mammals rest in bank burrows and depend on healthy freshwater habitats.",
+    "fact": "Underwater, a platypus closes its eyes and ears and uses electrical sensors in its bill to find prey."
+  },
+  "eurasian-beaver": {
+    "region": "Eurasia · rivers and lakes",
+    "diet": "Herbivore",
+    "size": "Mass about  15–30 kg",
+    "lifespan": "About 10–20 years in the wild",
+    "description": "Eurasian beavers fell trees, build lodges and sometimes dam streams. These changes create habitats for amphibians, fish and wetland birds.",
+    "fact": "A beaver's incisors grow continuously; gnawing helps keep them at a useful length.",
+    "chinaRegion": "Ulungur River basin, Xinjiang"
+  },
+  "american-alligator": {
+    "region": "North America · southeastern US wetlands",
+    "diet": "Carnivore",
+    "size": "Adult length usually about  2.5–4 m",
+    "lifespan": "About 30–50 years in the wild",
+    "description": "American alligators ambush prey in swamps, rivers and lakes. Depressions they excavate can retain water and shelter other animals during dry periods.",
+    "fact": "Females guard nests and help calling hatchlings leave the nest and enter water."
+  },
+  "shoebill": {
+    "region": "Africa · eastern tropical swamps",
+    "diet": "Carnivore · mainly fish",
+    "size": "Height about  1.1–1.4 m",
+    "lifespan": "Over 30 years in captivity",
+    "description": "Shoebills wait beside papyrus swamps with enormous shoe-shaped bills. When fish approach the surface, they lunge forward, often scooping up vegetation with the prey.",
+    "fact": "Remaining almost motionless for long periods helps a shoebill ambush aquatic prey."
+  },
+  "great-white-pelican": {
+    "region": "Africa and Eurasia · shallow lakes",
+    "diet": "Carnivore · fish",
+    "size": "Wingspan about  2.3–3.6 m",
+    "lifespan": "About 20–30 years",
+    "description": "Great white pelicans gather around lakes, deltas and shallow wetlands, scooping fish into broad throat pouches. Groups sometimes form arcs to herd fish into shallows.",
+    "fact": "Pelicans usually drain water from the pouch before swallowing a fish.",
+    "chinaRegion": "Lakes in Xinjiang and other regions"
+  },
+  "common-kingfisher": {
+    "region": "Eurasia · rivers and ponds",
+    "diet": "Carnivore · small fish",
+    "size": "Length about  16–18 cm",
+    "lifespan": "Usually a few years; some exceed 10",
+    "description": "Common kingfishers watch fish from waterside perches, then dive directly into the water. They return to a perch to handle their catch.",
+    "fact": "Their blue colour comes mainly from the structure of the feathers interacting with light, not blue pigment.",
+    "chinaRegion": "Rivers and ponds across China"
+  },
+  "axolotl": {
+    "region": "North America · Xochimilco, Mexico",
+    "diet": "Carnivore",
+    "size": "Total length usually about  15–30 cm",
+    "lifespan": "About 10–15 years in captivity",
+    "description": "Axolotls retain juvenile external gills and spend their lives in water. Although common in captivity, wild populations are extremely rare due to pollution, urban growth and introduced species.",
+    "fact": "Their ability to regrow injured limbs makes axolotls important in regeneration research."
+  },
+  "japanese-giant-salamander": {
+    "region": "Asia · Japanese mountain streams",
+    "diet": "Carnivore",
+    "size": "Total length over  1 m",
+    "lifespan": "Over 50 years in captivity",
+    "description": "Japanese giant salamanders live in cool, oxygen-rich streams, sheltering among rocks by day and hunting at night. River alteration and fragmented habitats disrupt breeding and movement.",
+    "fact": "Folds in their skin increase the surface area available for gas exchange."
+  },
+  "green-anaconda": {
+    "region": "South America · tropical rivers and swamps",
+    "diet": "Carnivore",
+    "size": "Large females over  5 m",
+    "lifespan": "Wild lifespan poorly documented",
+    "description": "Green anacondas inhabit slow rivers, swamps and flooded forests. Water supports their heavy bodies as they ambush and constrict prey.",
+    "fact": "Females are usually much larger than males, an extreme example of size differences between sexes in snakes."
+  },
+  "fishing-cat": {
+    "region": "Asia · South and Southeast Asian wetlands",
+    "diet": "Carnivore",
+    "size": "Length about  55–85 cm (excluding tail)",
+    "lifespan": "About 12 years in captivity",
+    "description": "Fishing cats hunt in marshes, mangroves and riverside scrub. Skilled swimmers, they depend on wetlands that are shrinking through drainage and coastal development.",
+    "fact": "Fishing cats search shallow water and may submerge their heads to catch fish."
+  },
+  "snow-leopard": {
+    "region": "China · high mountains of Qinghai, Tibet and Xinjiang",
+    "diet": "Carnivore",
+    "size": "Length about  0.9–1.3 m (excluding tail)",
+    "lifespan": "About 10–15 years in the wild",
+    "description": "Snow leopards hunt blue sheep and other hoofed animals among cliffs and alpine meadows. Long tails aid balance and broad paws suit rocks and snow.",
+    "fact": "A resting snow leopard may wrap its thick tail around its nose to reduce heat loss.",
+    "chinaRegion": "High mountains of Qinghai, Tibet and Xinjiang"
+  },
+  "golden-snub-nosed-monkey": {
+    "region": "China · forests of Sichuan, Shaanxi, Gansu and Hubei",
+    "diet": "Mainly plants",
+    "size": "Length about  57–76 cm (excluding tail)",
+    "lifespan": "Over 20 years",
+    "description": "Golden snub-nosed monkeys live in seasonal mountain forests and often feed on lichens in winter. Several family units can join into large groups.",
+    "fact": "These monkeys huddle together in cold weather to conserve warmth.",
+    "chinaRegion": "Mountain forests of Sichuan, Shaanxi, Gansu and Hubei"
+  },
+  "black-snub-nosed-monkey": {
+    "region": "China · northwestern Yunnan and southeastern Tibet",
+    "diet": "Mainly lichens and plants",
+    "size": "Length about  50–83 cm (excluding tail)",
+    "lifespan": "Lifespan poorly documented",
+    "description": "Black snub-nosed monkeys inhabit high-altitude coniferous forests, among the highest habitats used by primates. Continuous forests provide food and travel routes.",
+    "fact": "Lichens are an important food source, especially during winter.",
+    "chinaRegion": "Northwestern Yunnan and southeastern Tibet"
+  },
+  "white-headed-langur": {
+    "region": "China · Chongzuo karst, Guangxi",
+    "diet": "Herbivore",
+    "size": "Mass about  6–9 kg",
+    "lifespan": "Lifespan poorly documented",
+    "description": "White-headed langurs occur naturally in a small area of limestone mountains in Guangxi. They feed in forests during the day and often sleep in cliff caves.",
+    "fact": "Infants have golden-yellow fur that gradually changes to the adult black-and-white pattern.",
+    "chinaRegion": "Karst mountains around Chongzuo, Guangxi"
+  },
+  "asian-elephant": {
+    "region": "China · Xishuangbanna, Pu'er and nearby Yunnan",
+    "diet": "Herbivore",
+    "size": "Mass about  2–5 tonnes",
+    "lifespan": "About 60 years",
+    "description": "Asian elephants move between forest and open areas, eating grass, leaves, bark and fruit. Females and calves form families that need connected habitat.",
+    "fact": "Asian elephants usually have one finger-like projection at the trunk tip; African elephants have two.",
+    "chinaRegion": "Xishuangbanna, Pu'er and nearby areas of Yunnan"
+  },
+  "asiatic-black-bear": {
+    "region": "China · northeastern, southwestern and central forests",
+    "diet": "Omnivore",
+    "size": "Mass about  50–200 kg",
+    "lifespan": "About 20–25 years in the wild",
+    "description": "Asiatic black bears usually have a pale crescent on the chest and climb well. Their seasonal diet includes fruit, nuts and insects.",
+    "fact": "After eating fruit, bears disperse seeds in their droppings.",
+    "chinaRegion": "Mountain forests of northeastern, southwestern and central China"
+  },
+  "takin": {
+    "region": "China · Qinling and southwestern mountains",
+    "diet": "Herbivore",
+    "size": "Mass about  200–350 kg",
+    "lifespan": "About 15–20 years",
+    "description": "Takins move seasonally between mountain forests and alpine meadows. They browse leaves, shoots and herbs, using sturdy limbs on steep slopes.",
+    "fact": "Despite their cattle-like appearance, takins belong to the goat-antelope subfamily.",
+    "chinaRegion": "Qinling and southwestern mountains"
+  },
+  "tibetan-antelope": {
+    "region": "China · plateaus of Tibet, Qinghai and Xinjiang",
+    "diet": "Herbivore",
+    "size": "Mass about  25–40 kg",
+    "lifespan": "About 8–10 years in the wild",
+    "description": "Tibetan antelopes live on cold, open highland plains. Some females migrate to shared calving grounds, making migration corridors vital to recovery.",
+    "fact": "Males have long, slender horns; females usually have none.",
+    "chinaRegion": "Plateaus of Tibet, Qinghai and Xinjiang"
+  },
+  "kiang": {
+    "region": "China · Qinghai–Tibet Plateau grasslands",
+    "diet": "Herbivore",
+    "size": "Shoulder height about  1.2–1.4 m",
+    "lifespan": "About 20 years",
+    "description": "Kiangs graze on grasses and sedges across high-altitude plains. Reddish-brown backs contrast sharply with white undersides.",
+    "fact": "The kiang is the largest living wild ass.",
+    "chinaRegion": "Grasslands of the Qinghai–Tibet Plateau"
+  },
+  "przewalskis-horse": {
+    "region": "China · reintroduction areas in Xinjiang and Gansu",
+    "diet": "Herbivore",
+    "size": "Shoulder height about  1.2–1.5 m",
+    "lifespan": "About 20–25 years",
+    "description": "Przewalski's horses disappeared from the wild before captive breeding and reintroduction returned them to parts of their former range. Chinese conservation projects have contributed to this recovery.",
+    "fact": "Their short, upright manes distinguish them from most domestic horses.",
+    "chinaRegion": "Reintroduction areas in Xinjiang, Gansu and nearby regions"
+  },
+  "wild-yak": {
+    "region": "China · cold Qinghai–Tibet Plateau",
+    "diet": "Herbivore",
+    "size": "Male mass over  800 kg",
+    "lifespan": "About 20 years in the wild",
+    "description": "Wild yaks live in cold, thin highland air, protected by thick coats and robust bodies. They graze alpine meadows and grasslands.",
+    "fact": "Wild yaks are distinct from domestic yaks, and their wild populations need dedicated protection.",
+    "chinaRegion": "Cold highlands of the Qinghai–Tibet Plateau"
+  },
+  "bharal": {
+    "region": "China · Qinghai–Tibet Plateau and surrounding mountains",
+    "diet": "Herbivore",
+    "size": "Mass about  35–75 kg",
+    "lifespan": "About 12–15 years in the wild",
+    "description": "Blue sheep forage between steep slopes and alpine meadows. Grey-blue coats blend into rock, and the animals form an important prey base for snow leopards.",
+    "fact": "Blue sheep combine some characteristics of both sheep and goats.",
+    "chinaRegion": "Qinghai–Tibet Plateau and surrounding mountains"
+  },
+  "tibetan-fox": {
+    "region": "China · Qinghai–Tibet Plateau grasslands",
+    "diet": "Carnivore",
+    "size": "Length about  60–70 cm (excluding tail)",
+    "lifespan": "Wild lifespan poorly documented",
+    "description": "Tibetan foxes hunt pikas and other small animals in open highlands. Full cheek fur and narrow eyes give them a distinctive appearance.",
+    "fact": "Pikas are an important food source, showing how small animals support plateau food webs.",
+    "chinaRegion": "Grasslands of the Qinghai–Tibet Plateau"
+  },
+  "pallas-cat": {
+    "region": "China · Qinghai–Tibet Plateau, Inner Mongolia and Xinjiang",
+    "diet": "Carnivore",
+    "size": "Mass about  2.5–5 kg",
+    "lifespan": "Wild lifespan poorly documented",
+    "description": "Pallas's cats shelter in rock crevices and other animals' burrows, hunting pikas and rodents. Thick fur suits cold climates, while low rounded ears help conceal them.",
+    "fact": "Their pupils remain round when contracted, unlike the vertical slits typical of domestic cats.",
+    "chinaRegion": "Qinghai–Tibet Plateau, Inner Mongolia and Xinjiang"
+  },
+  "chinese-pangolin": {
+    "region": "China · southern China and neighbouring regions",
+    "diet": "Ants and termites",
+    "size": "Length about  40–60 cm (excluding tail)",
+    "lifespan": "Wild lifespan poorly documented",
+    "description": "Chinese pangolins forage at night, opening ant nests with strong claws and feeding with long, sticky tongues. Illegal hunting and habitat loss have greatly reduced wild populations.",
+    "fact": "Pangolin scales are mainly keratin, similar to the material in human fingernails.",
+    "chinaRegion": "Southern China and neighbouring regions"
+  },
+  "masked-palm-civet": {
+    "region": "China · central and southern mountain forests",
+    "diet": "Omnivore",
+    "size": "Length about  50–75 cm (excluding tail)",
+    "lifespan": "Over 15 years in captivity",
+    "description": "Masked palm civets climb well and are active at night. They eat fruit, insects and small animals, and have a pale stripe along the forehead and nose.",
+    "fact": "Palm civets belong to the civet family, not the cat family.",
+    "chinaRegion": "Mountain forests of central and southern China"
+  },
+  "leopard-cat": {
+    "region": "China · northeast to southern China",
+    "diet": "Carnivore",
+    "size": "Length about  40–65 cm (excluding tail)",
+    "lifespan": "About 4–10 years in the wild",
+    "description": "Leopard cats are roughly domestic-cat sized, with spotted coats. They hunt rodents and other small prey at night in forests, scrub and edges, and climb well.",
+    "fact": "The leopard cat is a separate wild species and should not be captured or kept as a domestic cat.",
+    "chinaRegion": "Regions from northeastern to southern China"
+  },
+  "crested-ibis": {
+    "region": "China · Shaanxi and restored populations elsewhere",
+    "diet": "Carnivore · small aquatic animals",
+    "size": "Length about  75 cm",
+    "lifespan": "Over 20 years",
+    "description": "Crested ibises probe shallow water and mud with curved bills and nest in tall trees. Protection and breeding programmes have helped this once extremely rare bird recover.",
+    "fact": "The underside of a crested ibis's open wings reveals a soft pink tint.",
+    "chinaRegion": "Shaanxi and restored populations in other regions"
+  },
+  "black-necked-crane": {
+    "region": "China · Qinghai–Tibet and Yunnan–Guizhou wetlands",
+    "diet": "Omnivore",
+    "size": "Height about  1.1–1.4 m",
+    "lifespan": "About 20–30 years",
+    "description": "Black-necked cranes breed in highland wetlands and winter at lower lakes and valleys. Marshes, meadows and farmland can all form parts of their habitat.",
+    "fact": "They can breed in wetlands several thousand metres above sea level.",
+    "chinaRegion": "Wetlands of the Qinghai–Tibet and Yunnan–Guizhou plateaus"
+  },
+  "reeves-pheasant": {
+    "region": "China · central mountain forests",
+    "diet": "Omnivore",
+    "size": "Male total length over  2 m (including tail)",
+    "lifespan": "Wild lifespan poorly documented",
+    "description": "Male Reeves's pheasants have black-and-white heads and exceptionally long tail feathers. They forage on the forest floor and roost in trees.",
+    "fact": "A male's tail accounts for much of its total length; females have shorter tails and more subdued colours.",
+    "chinaRegion": "Mountain forests of central China"
+  },
+  "mandarin-duck": {
+    "region": "China · northeastern breeding and eastern/southern wintering areas",
+    "diet": "Omnivore",
+    "size": "Length about  40–50 cm",
+    "lifespan": "Wild lifespan varies with habitat",
+    "description": "Mandarin ducks favour wooded rivers and lakes and often nest in tree cavities. Breeding males are colourful, while females are mainly grey-brown.",
+    "fact": "Ducklings leap from elevated nest cavities to follow their mother to water.",
+    "chinaRegion": "Breeds in the northeast; winters in eastern and southern China"
+  },
+  "chinese-alligator": {
+    "region": "China · Anhui and the lower Yangtze",
+    "diet": "Carnivore",
+    "size": "Total length usually about  1.5–2 m",
+    "lifespan": "Over 50 years",
+    "description": "Chinese alligators inhabit ponds, channels and slow wetlands, spending winter dormant in burrows. Habitat restoration and reintroduction are important for the small wild population.",
+    "fact": "It is one of only two living alligator species, alongside the American alligator.",
+    "chinaRegion": "Anhui and other parts of the lower Yangtze"
+  },
+  "chinese-sturgeon": {
+    "region": "China · Yangtze River and coastal seas",
+    "diet": "Carnivore · bottom-dwelling animals",
+    "size": "Large adults over  3 m",
+    "lifespan": "Several decades",
+    "description": "Chinese sturgeons grow at sea and return to rivers to breed. Dams, altered water flow and habitat deterioration have severely disrupted natural reproduction.",
+    "fact": "Rows of bony plates cover the body, while much of the skeleton remains cartilaginous.",
+    "chinaRegion": "Yangtze River and Chinese coastal waters"
+  },
+  "chinese-white-dolphin": {
+    "region": "China · Pearl River estuary, Xiamen and southern coasts",
+    "diet": "Carnivore · fish",
+    "size": "Length about  2–3 m",
+    "lifespan": "About 30–40 years",
+    "description": "Indo-Pacific humpback dolphins, commonly called Chinese white dolphins in China, use estuaries and shallow coastal waters. Vessel noise, bycatch and development threaten them.",
+    "fact": "Colour varies with age and region: young are often grey, while some adults are white or pink.",
+    "chinaRegion": "Pearl River estuary, Xiamen and southern coastal waters"
+  },
+  "yangtze-finless-porpoise": {
+    "region": "China · middle/lower Yangtze, Poyang and Dongting lakes",
+    "diet": "Carnivore · fish",
+    "size": "Length about  1.2–1.9 m",
+    "lifespan": "About 20 years",
+    "description": "Yangtze finless porpoises are small freshwater cetaceans that use echolocation to find prey. Fishing restrictions, habitat protection and conservation populations support their recovery.",
+    "fact": "They have no prominent dorsal fin, only a low ridge along the back.",
+    "chinaRegion": "Middle and lower Yangtze, Poyang Lake and Dongting Lake"
+  }
+}

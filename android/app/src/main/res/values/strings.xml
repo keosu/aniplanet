@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Wild Atlas 野境</string>
+    <string name="title_activity_main">Wild Atlas 野境</string>
+    <string name="package_name">org.wildatlas.app</string>
+    <string name="custom_url_scheme">org.wildatlas.app</string>
+</resources>
