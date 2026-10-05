@@ -2,6 +2,8 @@
 
 一个支持中英双语的动物科普应用：通过 3D 地球探索 125 种动物，其中 42 种标注中国境内分布，涵盖七类自然环境。支持网页和 Capacitor Android APK。
 
+在线体验：[野境 Wild Atlas](https://keosu.github.io/aniplanet/)。推送 `main` 后由 GitHub Actions 自动更新。
+
 ## 本地运行
 
 需要 Node.js 22.12+（本项目已在 Node.js 24 上验证）。

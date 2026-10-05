@@ -4,10 +4,11 @@
 
 ## 当前结论
 
-原有功能改造、本地 APK 打包和 Git 初始化均已完成。最新任务是使用本机 GitHub CLI 配置 GitHub Pages 自动部署。工作流、子路径资产修复及本地验证已完成。用户明确选择公开仓库后，已通过 CLI 将 `keosu/aniplanet` 设为公开并成功启用 Actions 模式的 Pages，待推送后验证首次部署。
+原有功能改造、本地 APK 打包、Git 初始化以及最新的 GitHub Pages 自动部署任务均已完成。用户明确选择公开仓库后，已通过 CLI 将 `keosu/aniplanet` 设为公开并启用 Actions 模式的 Pages。首次部署成功，实际网站已通过浏览器验证：https://keosu.github.io/aniplanet/ 。没有等待处理的用户任务。
 
 - 当前分支：`main`。
 - 功能代码基线：`57cb4fc` — `feat: initialize Wild Atlas with bilingual explorer and Android APK CI`。
+- Pages 实现提交：`6106dfa` — `ci: deploy Wild Atlas to GitHub Pages`，已推送并成功部署；后续交接文档提交以 Git 为准。
 - 首次提交包含 240 个文件。交接入口已在 `257ac8d` 提交；最新提交及工作区以 Git 为准。
 - 已配置 `origin = git@github.com:keosu/aniplanet.git`，`main` 已推送。2026-10-05 按用户授权从私有改为公开，当前 CLI 用户 `keosu` 具有管理员权限。
 - GitHub CLI 位于 `C:\Program Files\GitHub CLI\gh.exe`，版本 2.102.0，已登录；当前会话 PATH 可能没有刷新，可用完整路径调用。不要记录或输出令牌。
@@ -26,7 +27,7 @@
 | 动物 3D 轻量动画 | 本地模型呼吸、摆尾、鳍部摆动、水中浮动，最高 30fps；可暂停，保留初始姿态，遵循减少动态效果 |
 | GitHub CI 直接打包 APK，Actions 要新 | 已配置 Capacitor Android 工程、构建检查、APK 和 SHA-256 artifact 上传，并核对当前 Actions 版本 |
 | Git 初始化提交 | 已建立 main 分支及首次提交 |
-| GitHub Pages 自动部署 | 工作流与子路径验证完成，公开仓库已启用 Pages；待首次部署验证 |
+| GitHub Pages 自动部署 | 公开仓库已启用 Actions 发布，main 推送自动部署，首次 CI 和实际网站验证通过 |
 
 语言、主题、字号、动画开关、语速存于 `wild-atlas-preferences`，收藏存于 `wild-atlas-saved`。不要为了调试随意清除用户数据。当前动画设置也影响地球自转与云层；打开详情或设置后，背景地球停止渲染。
 
@@ -153,7 +154,9 @@ npm run android:apk
 - `npm run test:features`：125 条英文资料、设置持久化、语音模拟回调、动画及 7 种视口双字号全部通过。
 - `npm run android:sync`：根路径生产构建与 4 个原生插件同步成功；随后 `npm run test:pages` 验证根路径页面通过。没有因这次资源路径改动重新生成本地 APK，下方 APK 是此前产物。
 - `actionlint` 1.7.12 显式检查 Pages 和 Android 两个工作流，通过；`git diff --check` 通过。
-- Pages 创建 API 最初因私有仓库套餐限制返回 HTTP 422。用户随后授权公开仓库，CLI 已成功修改可见性，重试创建 Pages 成功；当前配置 `build_type=workflow`、`public=true`、`https_enforced=true`。首次部署结果待确认。
+- Pages 创建 API 最初因私有仓库套餐限制返回 HTTP 422。用户随后授权公开仓库，CLI 已成功修改可见性，重试创建 Pages 成功；当前配置 `build_type=workflow`、`public=true`、`https_enforced=true`。
+- GitHub Pages CI `37324067720`（提交 `6106dfa`）：构建、生产浏览器验证、上传和部署全部 `success`，https://github.com/keosu/aniplanet/actions/runs/37324067720 。
+- 已用未登录的 Edge 浏览器访问实际站点，HTTP 200，页面加载的入口为 `/aniplanet/assets/index-BKsDpxBG.js`，与本次构建一致；地球 canvas、物种摄影、来源 fetch 与本地 3D 成功，无浏览器异常和失败请求。
 
 ### 当前 APK 与本机日志
 
@@ -179,7 +182,7 @@ npm run android:apk
 
 已通过 CLI 完成用户授权的 `gh repo edit keosu/aniplanet --visibility public --accept-visibility-change-consequences`，并用 `gh api --method POST repos/keosu/aniplanet/pages -f build_type=workflow` 成功启用 Pages。默认网址为 `https://keosu.github.io/aniplanet/`。
 
-推送工作流会自动触发；后续也可用 `gh workflow run github-pages.yml -R keosu/aniplanet --ref main` 手动发布，再用 `gh run list -R keosu/aniplanet --workflow github-pages.yml` 查看运行。启用配置不代表首次部署已经成功，需要核对运行结论和实际网站。
+首次 Pages 部署运行 `37324067720` 已成功；网站已上线并实测。推送 main 会自动触发；后续也可用 `gh workflow run github-pages.yml -R keosu/aniplanet --ref main` 手动发布，再用 `gh run list -R keosu/aniplanet --workflow github-pages.yml` 查看运行。
 
 `npm run test:pages -- /aniplanet/` 需要前一步用同一 `--base /aniplanet/` 构建；无参数测试根路径。测试自己启动预览服务，不依赖旧会话。
 
@@ -205,10 +208,9 @@ runner 为 `ubuntu-latest`，Node.js 24，Temurin JDK 21。Artifact 名为 `wild
 
 以下不是尚未完成的用户任务；仅在用户提出相应目标时继续：
 
-1. 当前 Pages 请求已解决套餐 / 可见性问题，待首次运行结果与实际站点验证，见上文。
-2. 在 Android 真机验证安装、原生 TTS、中英文语音包、安全区、返回键和 GLB 分享。
-3. 需要正式分发时增加固定 release 签名，凭据通过合适的私密配置管理。
-4. 继续新增物种、写实模型或科普资料时维护双语覆盖和资产署名。
+1. 在 Android 真机验证安装、原生 TTS、中英文语音包、安全区、返回键和 GLB 分享。
+2. 需要正式分发时增加固定 release 签名，凭据通过合适的私密配置管理。
+3. 继续新增物种、写实模型或科普资料时维护双语覆盖和资产署名。
 
 ## 本轮修复过的易回归点
 
