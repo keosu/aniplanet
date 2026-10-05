@@ -1,5 +1,6 @@
 import { additionalAnimals } from "./additionalAnimals";
 import { chinaAnimals, chinaObservations } from "./chinaAnimals";
+import { assetPath } from "./assets";
 
 export type HabitatId =
   "all" | "savanna" | "forest" | "ocean" | "polar" | "desert" | "wetland" | "mountain";
@@ -862,7 +863,7 @@ for (const animal of animals) {
 }
 export const habitatName = (id: HabitatId) =>
   habitats.find((h) => h.id === id)?.name ?? "全部环境";
-export const imagePath = (id: string) => `/images/${id}.jpg`;
+export const imagePath = (id: string) => assetPath(`images/${id}.jpg`);
 export const statusColor = (code: string) =>
   ({
     LC: "#b4d39b",

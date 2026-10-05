@@ -10,6 +10,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { animals, type Animal, type HabitatId } from "./data";
 import { animalEmoji } from "./animalEmoji";
 import { usePreferences } from "./preferences";
+import { assetPath } from "./assets";
 export interface GlobeHandle {
   zoom: (direction: number) => void;
   reset: () => void;
@@ -176,10 +177,10 @@ export const Globe = forwardRef<GlobeHandle, Props>(function Globe(
       return t;
     };
     const earthMaterial = new THREE.MeshPhongMaterial({
-      map: texture("/images/earth.jpg", true),
-      normalMap: texture("/images/earth-normal.jpg"),
+      map: texture(assetPath("images/earth.jpg"), true),
+      normalMap: texture(assetPath("images/earth-normal.jpg")),
       normalScale: new THREE.Vector2(0.35, 0.35),
-      specularMap: texture("/images/earth-specular.jpg"),
+      specularMap: texture(assetPath("images/earth-specular.jpg")),
       specular: new THREE.Color("#24546c"),
       shininess: 10,
     });
@@ -189,7 +190,7 @@ export const Globe = forwardRef<GlobeHandle, Props>(function Globe(
     const clouds = new THREE.Mesh(
       new THREE.SphereGeometry(1.813, 80, 56),
       new THREE.MeshPhongMaterial({
-        map: texture("/images/earth-clouds.png", true),
+        map: texture(assetPath("images/earth-clouds.png"), true),
         transparent: true,
         opacity: 0.3,
         depthWrite: false,
@@ -441,7 +442,7 @@ export const Globe = forwardRef<GlobeHandle, Props>(function Globe(
       >
         {failed ? (
           <div className="globe-fallback">
-            <img src="/images/earth.jpg" alt={t("地球表面纹理")} />
+            <img src={assetPath("images/earth.jpg")} alt={t("地球表面纹理")} />
             <span>{t("当前设备不支持 WebGL，请从物种列表选择。")}</span>
           </div>
         ) : (

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { createAnimal } from "./models";
-import type { Animal } from "./data";
+import { imagePath, type Animal } from "./data";
 import { usePreferences } from "./preferences";
 export default function AnimalScene({
   animal,
@@ -325,7 +325,7 @@ export default function AnimalScene({
     >
       {failed && (
         <div className="scene-fallback">
-          <img src={`/images/${animal.id}.jpg`} alt={animal.name} />
+          <img src={imagePath(animal.id)} alt={animal.name} />
           <p>{t("此设备暂不支持 3D，仍可浏览物种资料与摄影。")}</p>
         </div>
       )}

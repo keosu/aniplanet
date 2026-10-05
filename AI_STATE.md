@@ -4,12 +4,13 @@
 
 ## 当前结论
 
-用户要求的本轮功能改造、本地 APK 打包和 Git 初始化均已完成，没有正在等待处理的功能任务。最后一项请求是记录状态，方便新会话的 agent 接续。
+原有功能改造、本地 APK 打包和 Git 初始化均已完成。最新任务是使用本机 GitHub CLI 配置 GitHub Pages 自动部署。工作流、子路径资产修复及本地验证已完成。用户明确选择公开仓库后，已通过 CLI 将 `keosu/aniplanet` 设为公开并成功启用 Actions 模式的 Pages，待推送后验证首次部署。
 
 - 当前分支：`main`。
 - 功能代码基线：`57cb4fc` — `feat: initialize Wild Atlas with bilingual explorer and Android APK CI`。
-- 首次提交包含 240 个文件。记录本次状态前工作区干净；本文件和 AGENTS.md 由后续文档提交保存，最新提交以 `git log` 为准。
-- 尚未配置 Git remote，未推送到 GitHub，也未实际触发远端 CI。
+- 首次提交包含 240 个文件。交接入口已在 `257ac8d` 提交；最新提交及工作区以 Git 为准。
+- 已配置 `origin = git@github.com:keosu/aniplanet.git`，`main` 已推送。2026-10-05 按用户授权从私有改为公开，当前 CLI 用户 `keosu` 具有管理员权限。
+- GitHub CLI 位于 `C:\Program Files\GitHub CLI\gh.exe`，版本 2.102.0，已登录；当前会话 PATH 可能没有刷新，可用完整路径调用。不要记录或输出令牌。
 - 仓库目录名为 `ani3D`，产品名为“野境 / Wild Atlas”，npm 包名为 `wild-atlas`。
 
 ## 用户要求与完成情况
@@ -25,6 +26,7 @@
 | 动物 3D 轻量动画 | 本地模型呼吸、摆尾、鳍部摆动、水中浮动，最高 30fps；可暂停，保留初始姿态，遵循减少动态效果 |
 | GitHub CI 直接打包 APK，Actions 要新 | 已配置 Capacitor Android 工程、构建检查、APK 和 SHA-256 artifact 上传，并核对当前 Actions 版本 |
 | Git 初始化提交 | 已建立 main 分支及首次提交 |
+| GitHub Pages 自动部署 | 工作流与子路径验证完成，公开仓库已启用 Pages；待首次部署验证 |
 
 语言、主题、字号、动画开关、语速存于 `wild-atlas-preferences`，收藏存于 `wild-atlas-saved`。不要为了调试随意清除用户数据。当前动画设置也影响地球自转与云层；打开详情或设置后，背景地球停止渲染。
 
@@ -53,6 +55,9 @@
 | `scripts/settings-check.mjs` | 新增功能与双字号布局回归，自动启动 / 关闭测试服务 |
 | `scripts/app-layout-check.mjs` | 原有应用布局、筛选、收藏、GLB、本地内容回归 |
 | `.github/workflows/android-apk.yml` | APK CI |
+| `.github/workflows/github-pages.yml` | Pages 构建、生产验证、artifact 与部署 |
+| `src/assets.ts`、`src/vite-env.d.ts` | Vite BASE_URL 公共资源路径及类型；兼容项目子路径和根路径 |
+| `scripts/pages-check.mjs` | dist 生产页面验证；自动管理端口 5177 |
 | `.github/dependabot.yml` | 每周检查 Actions，按月检查 npm / Capacitor 依赖 |
 
 ## 环境与常用命令
@@ -140,7 +145,15 @@ npm run android:apk
 - 浏览器语音回归使用模拟的系统语音回调，不代表已经听过设备实际发声。
 - Android 原生语音和文件分享已编译入 APK，但本轮没有 Android 真机安装、发声或分享的实测结果。需要设备有对应语言的 TTS 引擎 / 语音包，部分声音依赖网络。
 - 在线 Sketchfab 模型的国内网络可用性未验证；仅在用户点击后加载，保留摄影回退。
-- 本地 workflow 语法和 Android 构建已验证，GitHub 托管 runner 上的 CI 尚未运行。
+- GitHub APK CI `37322899490`（提交 `257ac8d`）已完成且结论为 `success`：https://github.com/keosu/aniplanet/actions/runs/37322899490 。这是原有代码基线的远端构建成功，仍不代表 Android 真机验证。
+
+### Pages 改造验证（2026-10-05）
+
+- `npm run build -- --base /aniplanet/` 与 `npm run test:pages -- /aniplanet/`：通过。实际生产页面验证所有被页面加载的资源在子路径内，摄影可解码，四张地球纹理、favicon、署名 fetch 和清单链接正常，本地 3D 延迟加载及强制禁用 WebGL 后的照片回退正常；无浏览器异常或缺失资源。
+- `npm run test:features`：125 条英文资料、设置持久化、语音模拟回调、动画及 7 种视口双字号全部通过。
+- `npm run android:sync`：根路径生产构建与 4 个原生插件同步成功；随后 `npm run test:pages` 验证根路径页面通过。没有因这次资源路径改动重新生成本地 APK，下方 APK 是此前产物。
+- `actionlint` 1.7.12 显式检查 Pages 和 Android 两个工作流，通过；`git diff --check` 通过。
+- Pages 创建 API 最初因私有仓库套餐限制返回 HTTP 422。用户随后授权公开仓库，CLI 已成功修改可见性，重试创建 Pages 成功；当前配置 `build_type=workflow`、`public=true`、`https_enforced=true`。首次部署结果待确认。
 
 ### 当前 APK 与本机日志
 
@@ -157,6 +170,20 @@ npm run android:apk
 重新打包后大小和 hash 可能变化，应以新产物为准。当前是可安装的调试签名版；正式分发需要固定 release 签名。不同 CI 运行生成的调试证书可能不同，卸载重装会丢失本机收藏和设置。
 
 ## GitHub CI 状态
+
+### Pages
+
+工作流：`.github/workflows/github-pages.yml`。推送 `main` 或手动触发；只允许 main 的构建进入发布。先由 `configure-pages` 取得实际 `base_path`，生产构建并执行 `test:pages`，再上传 `dist/`、部署到 `github-pages` 环境。并发组 `github-pages`，避免中断正在进行的部署。
+
+本次核对官方最新发布：`configure-pages v6.0.0`、`upload-pages-artifact v5.0.0`、`deploy-pages v5.0.1`；使用对应主版本标签。`checkout v7.0.1` 与 `setup-node v7.0.0` 也重新核实。Node.js 24，ubuntu-latest。
+
+已通过 CLI 完成用户授权的 `gh repo edit keosu/aniplanet --visibility public --accept-visibility-change-consequences`，并用 `gh api --method POST repos/keosu/aniplanet/pages -f build_type=workflow` 成功启用 Pages。默认网址为 `https://keosu.github.io/aniplanet/`。
+
+推送工作流会自动触发；后续也可用 `gh workflow run github-pages.yml -R keosu/aniplanet --ref main` 手动发布，再用 `gh run list -R keosu/aniplanet --workflow github-pages.yml` 查看运行。启用配置不代表首次部署已经成功，需要核对运行结论和实际网站。
+
+`npm run test:pages -- /aniplanet/` 需要前一步用同一 `--base /aniplanet/` 构建；无参数测试根路径。测试自己启动预览服务，不依赖旧会话。
+
+### Android APK
 
 触发条件：推送 `main` / `master`、`v*` 标签、Pull Request 或手动 `workflow_dispatch`。
 
@@ -178,7 +205,7 @@ runner 为 `ubuntu-latest`，Node.js 24，Temurin JDK 21。Artifact 名为 `wild
 
 以下不是尚未完成的用户任务；仅在用户提出相应目标时继续：
 
-1. 配置 GitHub 仓库地址并推送 main，观察第一次真实 CI 运行。
+1. 当前 Pages 请求已解决套餐 / 可见性问题，待首次运行结果与实际站点验证，见上文。
 2. 在 Android 真机验证安装、原生 TTS、中英文语音包、安全区、返回键和 GLB 分享。
 3. 需要正式分发时增加固定 release 签名，凭据通过合适的私密配置管理。
 4. 继续新增物种、写实模型或科普资料时维护双语覆盖和资产署名。

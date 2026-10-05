@@ -4,6 +4,7 @@ import { animals } from "./data";
 import { realisticModelCount } from "./realisticModels";
 import { themes, usePreferences } from "./preferences";
 import { SpeechButton } from "./SpeechButton";
+import { assetPath } from "./assets";
 
 export const guide = [
   [
@@ -248,11 +249,11 @@ export function Settings({ onClose }: { onClose: () => void }) {
                 "摄影、地球纹理和在线模型的作者与许可可在物种详情的来源页查阅。模型下载与再利用须遵循原作者许可。",
               )}
             </p>
-            <a href="/image-credits.json" target="_blank" rel="noreferrer">
+            <a href={assetPath("image-credits.json")} target="_blank" rel="noreferrer">
               <Download size={15} />
               {t("影像来源清单")}
             </a>
-            <a href="/model-credits.json" target="_blank" rel="noreferrer">
+            <a href={assetPath("model-credits.json")} target="_blank" rel="noreferrer">
               <Download size={15} />
               {t("模型来源清单")}
             </a>

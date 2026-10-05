@@ -41,6 +41,7 @@ import { Settings } from "./Settings";
 import { SpeechButton } from "./SpeechButton";
 import { usePreferences } from "./preferences";
 import { localizeAnimal } from "./localizeAnimal";
+import { assetPath } from "./assets";
 import { Capacitor } from "@capacitor/core";
 import { App as NativeApp } from "@capacitor/app";
 const AnimalScene = lazy(() => import("./AnimalScene"));
@@ -287,7 +288,7 @@ export default function App() {
   useEffect(() => {
     if (detailTab !== "source" || credits.length) return;
     const c = new AbortController();
-    fetch("/image-credits.json", { signal: c.signal })
+    fetch(assetPath("image-credits.json"), { signal: c.signal })
       .then((r) => {
         if (!r.ok) throw new Error();
         return r.json();

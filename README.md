@@ -20,6 +20,31 @@ npm run preview
 
 生产文件输出到 `dist/`，可部署到任意静态网站托管服务，无需后端。
 
+## GitHub Pages 自动部署
+
+`.github/workflows/github-pages.yml` 在推送 `main` 或手动运行 **Actions → Deploy GitHub Pages → Run workflow** 时构建并部署网页。构建先检查 TypeScript，再通过生产页面测试验证摄影、地球纹理、来源清单、本地 3D 与 WebGL 回退；通过后上传 `dist/` 并发布到 `github-pages` 环境。部署成功的运行会提供网站链接。
+
+首次使用需要在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**，管理员也可以用已登录的 GitHub CLI 启用：
+
+```sh
+gh api --method POST repos/keosu/aniplanet/pages -f build_type=workflow
+```
+
+如果 Pages 已存在但仍使用分支发布，改用 `--method PUT` 更新 `build_type`。GitHub Free 下私有仓库不支持 Pages，需要公开仓库或使用支持私有仓库 Pages 的套餐。当前 `keosu/aniplanet` 已按用户要求通过 CLI 设为公开，并启用 Actions 发布；最新部署记录见 [AI_STATE.md](AI_STATE.md)。
+
+工作流从 `configure-pages` 读取实际网站路径，因此支持仓库子路径和自定义域名。当前仓库的默认项目地址为 `https://keosu.github.io/aniplanet/`。运行时图片、纹理与署名文件通过 `src/assets.ts` 使用 Vite 的 `BASE_URL`，普通构建与 Android 仍使用根路径。
+
+截至 2026-10-05 已核对最新发布：`checkout@v7`、`setup-node@v7`、`configure-pages@v6`、`upload-pages-artifact@v5`、`deploy-pages@v5`，运行环境为 `ubuntu-latest` 和 Node.js 24。只给部署 job 授予 `pages: write` 和 `id-token: write`，仅允许 `main` 发布。
+
+本地复现仓库子路径的生产验证：
+
+```sh
+npm run build -- --base /aniplanet/
+npm run test:pages -- /aniplanet/
+```
+
+`test:pages` 自行管理端口 5177 的 Vite 预览服务，读取已经构建好的 `dist/`，不重新构建。普通根路径可用 `npm run build` 后运行 `npm run test:pages`。Windows 默认调用 Edge，其余系统使用 Playwright Chromium，支持 `BROWSER_PATH`。子路径构建后如需打包 APK，运行 `npm run android:sync` 恢复根路径构建并同步原生工程。
+
 ## 设置与说明
 
 点击右上角设置按钮，切换「设置 / 使用说明」。原底部状态栏已移除，地球操作、资料范围和来源说明移入说明页。
@@ -75,6 +100,7 @@ npm run android:apk
 - `src/messages.en.json`、`src/animals.en.json`、`src/localizeAnimal.ts`：完整界面与物种英文资料。
 - `src/SpeechButton.tsx`：网页 / Android 双语朗读、语速和停止控制。
 - `.github/workflows/android-apk.yml`：校验、构建和上传 APK；`.github/dependabot.yml`：版本更新检查。
+- `.github/workflows/github-pages.yml`：生产验证与 Pages 自动部署；`src/assets.ts`：随部署路径加载公共资产。
 - `src/animalEmoji.ts`：地球导航用动物图标。
 - `src/Globe.tsx`：地球渲染与标记交互。
 - `src/AnimalScene.tsx`、`src/models.ts`：3D 环境与程序化动物形态。
