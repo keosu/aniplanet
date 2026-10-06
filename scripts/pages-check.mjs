@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { chromium, expect } from "@playwright/test";
 import { preview } from "vite";
+import { checkPwa } from "./pwa-check.mjs";
 
 // Run against dist, never Vite's source-module server. The same check covers
 // root/Capacitor builds and project Pages URLs, where absolute assets break.
@@ -105,6 +106,7 @@ try {
   assert.deepEqual(badResponses, [], "No missing assets");
   assert.deepEqual(errors, [], "No browser exceptions");
   console.log(`Production website verified at ${basePath}: photos, textures, credits, lazy 3D and WebGL fallbacks.`);
+  await checkPwa(browser, base);
 } finally {
   await browser?.close();
   await new Promise((resolve, reject) => server.httpServer.close((error) => error ? reject(error) : resolve()));

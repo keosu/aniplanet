@@ -348,6 +348,22 @@
   font-size: 0.8125rem;
   padding-top: 20px;
 }
+.install-app .speech-button {
+  margin-top: 12px;
+}
+.install-app .pwa-status {
+  color: var(--accent);
+}
+.pwa-update {
+  margin-top: 14px;
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+}
+@media (max-width: 360px) {
+  .scope-switch small {
+    display: none;
+  }
+}
 .speech-control {
   margin: 0 0 18px;
 }

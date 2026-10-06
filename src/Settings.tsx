@@ -5,6 +5,7 @@ import { realisticModelCount } from "./realisticModels";
 import { themes, usePreferences } from "./preferences";
 import { SpeechButton } from "./SpeechButton";
 import { assetPath } from "./assets";
+import { InstallApp } from "./InstallApp";
 
 export const guide = [
   [
@@ -17,7 +18,7 @@ export const guide = [
   ],
   [
     "走近动物",
-    "点击查看详情，阅读物种资料，或收听当前语言的语音介绍。摄影和本地 3D 示意可离线使用；在线 3D 需要网络，加载失败时可切回摄影。",
+    "点击查看详情，阅读物种资料，或收听当前语言的语音介绍。网页在离线内容准备完成后可离线查看摄影和本地 3D，Android 应用已内置这些内容。在线 3D 需要网络，加载失败时可切回摄影。",
   ],
   [
     "轻轻动起来",
@@ -98,6 +99,7 @@ export function Settings({ onClose }: { onClose: () => void }) {
           role="tabpanel"
           aria-labelledby="settings-tab"
         >
+          <InstallApp />
           <section className="setting-section">
             <h3>{t("界面语言")}</h3>
             <div className="segmented-control">

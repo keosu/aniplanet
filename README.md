@@ -1,6 +1,6 @@
 # 野境 · WILD ATLAS
 
-一个支持中英双语的动物科普应用：通过 3D 地球探索 125 种动物，其中 42 种标注中国境内分布，涵盖七类自然环境。支持网页和 Capacitor Android APK。
+一个支持中英双语的动物科普应用：通过 3D 地球探索 125 种动物，其中 42 种标注中国境内分布，涵盖七类自然环境。支持网页、可安装的 PWA 和 Capacitor Android APK。
 
 在线体验：[野境 Wild Atlas](https://keosu.github.io/aniplanet/)。推送 `main` 后由 GitHub Actions 自动更新。
 
@@ -48,6 +48,18 @@ npm run test:pages -- /aniplanet/
 `test:pages` 自行管理端口 5177 的 Vite 预览服务，读取已经构建好的 `dist/`，不重新构建。普通根路径可用 `npm run build` 后运行 `npm run test:pages`。Windows 默认调用 Edge，其余系统使用 Playwright Chromium，支持 `BROWSER_PATH`。子路径构建后如需打包 APK，运行 `npm run android:sync` 恢复根路径构建并同步原生工程。
 
 ## 设置与说明
+
+### PWA 安装与离线使用
+
+打开网站后，在右上角 **设置 → 安装应用** 中安装。Chrome / Edge 满足条件时显示「安装到设备」，也可使用浏览器菜单中的安装选项。iPhone / iPad 使用 Safari 的「分享 → 添加到主屏幕」，如有「作为网页 App 打开」选项则保持开启。浏览器不保证自动弹出安装提示；无痕窗口、内置浏览器或已安装状态可能不提供安装按钮。
+
+首次联网会准备约 45 MB 离线内容。设置页显示「离线内容已就绪」后，可以断网重新打开网站，查看全部 125 种动物资料与摄影、地球纹理、本地 3D 和来源信息。在线 Sketchfab 模型和部分系统声音仍需要网络。浏览器清理网站数据后需重新缓存；收藏与设置仍使用原有 localStorage。
+
+发现新版本时，设置页提供「更新并重新打开」，保留收藏和偏好。缓存按应用地址隔离，适配 `/aniplanet/` 子路径及根路径；不缓存第三方 Sketchfab 内容。开发服务器不注册 Service Worker；Capacitor 原生应用继续使用 APK 内置资源，不注册 Service Worker，也不显示网页安装入口。
+
+PWA 使用 `vite-plugin-pwa` / Workbox 生成清单与预缓存。安装图标沿用现有 W 标志，包含 192 / 512 像素图标、maskable 图标及 Apple touch icon；需要更新时运行 `node scripts/generate-pwa-icons.mjs`。全屏按钮位于顶部工具栏、设置按钮左侧，进入与退出全屏时同步更新图标和提示。
+
+### 偏好设置
 
 点击右上角设置按钮，切换「设置 / 使用说明」。原底部状态栏已移除，地球操作、资料范围和来源说明移入说明页。
 
@@ -103,6 +115,7 @@ npm run android:apk
 - `src/SpeechButton.tsx`：网页 / Android 双语朗读、语速和停止控制。
 - `.github/workflows/android-apk.yml`：校验、构建和上传 APK；`.github/dependabot.yml`：版本更新检查。
 - `.github/workflows/github-pages.yml`：生产验证与 Pages 自动部署；`src/assets.ts`：随部署路径加载公共资产。
+- `src/pwa.ts`、`src/InstallApp.tsx`、`vite.config.ts`：PWA 安装、离线准备状态、用户确认更新及预缓存；`public/icons/`：安装图标。
 - `src/animalEmoji.ts`：地球导航用动物图标。
 - `src/Globe.tsx`：地球渲染与标记交互。
 - `src/AnimalScene.tsx`、`src/models.ts`：3D 环境与程序化动物形态。
@@ -125,7 +138,9 @@ Sketchfab 在国内的实际可用性取决于线路与资源域名，当前环�
 
 `npm run build` 执行 TypeScript 检查与生产构建。
 
-`npm run test:features` 自动在端口 5176 启动并关闭测试服务，验证 125 条英文资料、主题和字号持久化、双语搜索、语音开始 / 停止 / 切换 / 缺少语音包、模型动画暂停、系统减少动态效果，以及 7 种尺寸下的两个字号。语音测试模拟系统语音回调，不依赖 CI 音频驱动；实际发声取决于设备上的语音引擎与语言包。Windows 默认用 Edge，其余系统先运行 `npx playwright install --with-deps chromium`。可用 `BROWSER_PATH` 指定浏览器。
+`npm run test:pages` 同时检查生产网页和 PWA；子路径构建后使用 `npm run test:pages -- /aniplanet/`。PWA 检查使用独立临时浏览器配置，验证清单、图标、浏览器安装条件、全部本地图片缓存、断网后重新打开及延迟加载的本地 3D、真实 Service Worker 更新与用户数据保留，以及注册失败回退。更新测试暂时修改 `dist/sw.js`，结束时恢复原文件，然后 CI 才上传产物。测试覆盖根路径和项目子路径，不代表已在手机上实际完成 PWA 安装。
+
+`npm run test:features` 自动在端口 5176 启动并关闭测试服务，验证 125 条英文资料、主题和字号持久化、双语搜索、语音开始 / 停止 / 切换 / 缺少语音包、模型动画暂停、系统减少动态效果，以及 7 种尺寸下的两个字号。另验证顶部全屏切换、安装事件的取消 / 失败 / 完成回调、iOS 安装说明和独立应用模式识别。安装回调与 iOS 环境采用模拟；语音测试模拟系统语音回调，不依赖 CI 音频驱动；实际发声取决于设备上的语音引擎与语言包。Windows 默认用 Edge，其余系统先运行 `npx playwright install --with-deps chromium`。可用 `BROWSER_PATH` 指定浏览器。
 
 `scripts/smoke-test.mjs` 使用 Playwright 检查浏览器交互、图片、收藏持久化、3D 场景、筛选、资料来源及移动端溢出，并把截图存入 `test-results/`。运行前启动开发服务：
 

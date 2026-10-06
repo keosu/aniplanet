@@ -17,6 +17,7 @@ import {
   List,
   MapPin,
   Maximize2,
+  Minimize2,
   Minus,
   Pause,
   Play,
@@ -189,6 +190,12 @@ export default function App() {
   const [catalogOpen, setCatalogOpen] = useState(false),
     [rotating, setRotating] = useState(false);
   const [modal, setModal] = useState<"animal" | "settings" | null>(null);
+  const [isFullscreen, setIsFullscreen] = useState(!!document.fullscreenElement);
+  useEffect(() => {
+    const changed = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener("fullscreenchange", changed);
+    return () => document.removeEventListener("fullscreenchange", changed);
+  }, []);
   const [view, setView] = useState<"photo" | "simple" | "online">("photo");
   const [detailTab, setDetailTab] = useState<"info" | "download" | "source">(
     "info",
@@ -423,6 +430,15 @@ export default function App() {
               }}
             >
               <Bookmark size={17} fill={savedOnly ? "currentColor" : "none"} />
+            </button>
+            <button
+              className={`icon-button fullscreen-button ${isFullscreen ? "active" : ""}`}
+              aria-label={t(isFullscreen ? "退出全屏" : "全屏")}
+              title={t(isFullscreen ? "退出全屏" : "全屏")}
+              aria-pressed={isFullscreen}
+              onClick={() => void fullscreen()}
+            >
+              {isFullscreen ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
             </button>
             <button
               className="icon-button"
@@ -678,13 +694,6 @@ export default function App() {
               }}
             >
               <RotateCcw size={16} />
-            </button>
-            <button
-              className="fullscreen-button"
-              aria-label={t("全屏")}
-              onClick={() => void fullscreen()}
-            >
-              <Maximize2 size={16} />
             </button>
           </div>
         </main>

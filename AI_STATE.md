@@ -4,7 +4,7 @@
 
 ## 当前结论
 
-原有功能改造、本地 APK 打包、Git 初始化以及最新的 GitHub Pages 自动部署任务均已完成。用户明确选择公开仓库后，已通过 CLI 将 `keosu/aniplanet` 设为公开并启用 Actions 模式的 Pages。首次部署成功，实际网站已通过浏览器验证：https://keosu.github.io/aniplanet/ 。没有等待处理的用户任务。
+原有功能改造、本地 APK 打包、Git 初始化和 GitHub Pages 自动部署已完成。用户明确选择公开仓库后，已通过 CLI 将 `keosu/aniplanet` 设为公开并启用 Actions 模式的 Pages。首次部署成功：https://keosu.github.io/aniplanet/ 。本轮按用户要求补充 PWA 安装与离线支持，并将全屏按钮移至顶部；本地实现与验证已完成，本轮提交及部署状态见下方记录（以实际 Git / CI 为准）。
 
 - 当前分支：`main`。
 - 功能代码基线：`57cb4fc` — `feat: initialize Wild Atlas with bilingual explorer and Android APK CI`。
@@ -28,6 +28,8 @@
 | GitHub CI 直接打包 APK，Actions 要新 | 已配置 Capacitor Android 工程、构建检查、APK 和 SHA-256 artifact 上传，并核对当前 Actions 版本 |
 | Git 初始化提交 | 已建立 main 分支及首次提交 |
 | GitHub Pages 自动部署 | 公开仓库已启用 Actions 发布，main 推送自动部署，首次 CI 和实际网站验证通过 |
+| PWA 安装与离线 | 已添加清单、安装图标、全部本地内容预缓存、双语安装入口及更新操作；根路径与子路径生产验证通过 |
+| 全屏按钮移到顶部 | 位于设置左侧，进入 / 退出全屏更新图标及无障碍标签，小屏双字号通过 |
 
 语言、主题、字号、动画开关、语速存于 `wild-atlas-preferences`，收藏存于 `wild-atlas-saved`。不要为了调试随意清除用户数据。当前动画设置也影响地球自转与云层；打开详情或设置后，背景地球停止渲染。
 
@@ -173,6 +175,21 @@ npm run android:apk
 重新打包后大小和 hash 可能变化，应以新产物为准。当前是可安装的调试签名版；正式分发需要固定 release 签名。不同 CI 运行生成的调试证书可能不同，卸载重装会丢失本机收藏和设置。
 
 ## GitHub CI 状态
+
+### PWA 与顶部全屏（2026-10-05）
+
+- `vite-plugin-pwa@2.0.0`（本轮从 npm 核实版本及 Vite 8 兼容性），使用 Workbox prompt 更新。既有依赖锁定版本未变，安装后 npm audit 为 0。
+- `vite.config.ts` 生成相对地址的 manifest（id / start_url / scope 均为 `./`），兼容根路径与 Pages；162 项预缓存约 43,823 KiB，包含全部摄影、地球纹理、来源、应用及延迟加载模块。只缓存本站内容。
+- `public/icons/` 中的 192 / 512、maskable 和 Apple 图标由现有 favicon 生成；可用 `node scripts/generate-pwa-icons.mjs` 重现。
+- `src/pwa.ts` 在 React 启动前捕获安装事件；仅生产网页注册 Service Worker，跳过 Capacitor。安装事件只能使用一次，用户接受不等于安装完成，以 `appinstalled` 为准。新版本等待用户在设置中选择「更新并重新打开」，保留 localStorage。
+- `src/InstallApp.tsx` 提供双语安装入口、iOS / 通用菜单说明、离线准备 / 失败状态、更新按钮。首次联网约 45 MB，完成后显示可离线；Sketchfab 与部分系统语音仍需网络。
+- 全屏按钮从 `.map-tools` 移至 `.header-actions`、设置左侧，监听 `fullscreenchange` 更新图标及标签。≤360px 隐藏顶部区域物种数量，为按钮留空间。
+- `npm run test:features`：通过 125 条英文资料、原有语音及动画回归、真实浏览器全屏切换、模拟安装取消 / 异常 / 完成、模拟 iOS 菜单与独立模式、7 种视口 × 2 字号（含顶部按钮不重叠）。已查看手机截图。
+- `npm run build -- --base /aniplanet/` + `npm run test:pages -- /aniplanet/`：最终版本通过。`npm run android:sync` + `npm run test:pages`：通过根路径生产构建、4 个原生插件同步与根路径 PWA 回归。
+- `scripts/pwa-check.mjs` 由现有 `test:pages` 调用，因此 Pages CI 自动覆盖。实际浏览器安装条件检查无错误；验证全部本地图片入缓存、断网后重新打开、此前未查看的虎照片 / 来源 / 本地 3D、真实等待中的 Service Worker 更新，以及设置和收藏保留。单独的注册失败模拟仍能使用网页摄影。
+- 更新测试临时修改 `dist/sw.js` 尾部注释并在 finally 恢复，CI 上传前已恢复；临时浏览器 profile 位于忽略的 test-results 下，验证目录后清理。
+- 边界：未在 Android / iOS 真机完成 PWA 安装；安装按钮回调与 iOS 标识测试是模拟。Android 本轮只同步网页，未重新本地打包 APK。
+- 本轮尚未提交 / 推送，后续记录实际提交、Pages CI 与线上检查结果。
 
 ### Pages
 

@@ -93,7 +93,42 @@ try {
   await page.goto(base, { waitUntil: "networkidle" });
   await expect(page.locator("html")).toHaveAttribute("data-theme", "ocean");
   await expect(page.locator(".app-status")).toHaveCount(0);
+  const fullscreen = page.locator(".app-header .fullscreen-button");
+  await expect(fullscreen).toHaveAttribute("aria-pressed", "false");
+  await expect(page.locator(".map-tools .fullscreen-button")).toHaveCount(0);
+  await fullscreen.click();
+  await expect(fullscreen).toHaveAttribute("aria-label", "退出全屏");
+  await expect(fullscreen).toHaveAttribute("aria-pressed", "true");
+  await fullscreen.click();
+  await expect(fullscreen).toHaveAttribute("aria-pressed", "false");
+  await fullscreen.click();
+  await page.evaluate(() => document.exitFullscreen());
+  await expect(fullscreen).toHaveAttribute("aria-label", "全屏");
+  // Simulate the browser prompt callback, not an OS installation. Dispatch before
+  // opening Settings so this also checks that the event is retained globally.
+  const offerInstall = (outcome, fails = false) => page.evaluate(({ outcome, fails }) => {
+    const event = new Event("beforeinstallprompt", { cancelable: true });
+    event.prompt = async () => {
+      window.installPromptCalls = (window.installPromptCalls || 0) + 1;
+      if (fails) throw new Error("Browser refused installation");
+    };
+    event.userChoice = Promise.resolve({ outcome });
+    window.dispatchEvent(event);
+  }, { outcome, fails });
+  await offerInstall("dismissed");
   await page.getByRole("button", { name: "设置与说明", exact: true }).click();
+  await page.getByRole("button", { name: "安装到设备" }).click();
+  await expect(page.getByRole("button", { name: "安装到设备" })).toHaveCount(0);
+  await expect(page.locator(".install-app")).not.toContainText("应用已安装");
+  await offerInstall("accepted", true);
+  await page.getByRole("button", { name: "安装到设备" }).click();
+  await expect(page.locator(".install-app [role=alert]")).toContainText("安装未完成");
+  await offerInstall("accepted");
+  await page.getByRole("button", { name: "安装到设备" }).click();
+  await expect(page.locator(".install-app")).not.toContainText("应用已安装");
+  await page.evaluate(() => window.dispatchEvent(new Event("appinstalled")));
+  await expect(page.locator(".install-app")).toContainText("应用已安装");
+  assert.equal(await page.evaluate(() => window.installPromptCalls), 3);
   await page.getByRole("button", { name: "墨绿森林" }).click();
   const forestColor = await page
     .locator(".app-dialog")
@@ -263,6 +298,9 @@ try {
       );
       const actions = await page.locator(".header-actions").boundingBox();
       assert.ok(actions.x + actions.width <= width, `${width}: header fits`);
+      const scope = await page.locator(".scope-switch").boundingBox();
+      assert.ok(scope.x + scope.width <= actions.x, `${width}: header controls do not overlap`);
+      await expect(page.locator(".app-header .fullscreen-button")).toBeVisible();
       await page
         .getByRole("button", { name: "View details", exact: true })
         .click();
@@ -300,8 +338,23 @@ try {
   await expect(page.locator(".speech-error")).toContainText("Install a voice");
   await page.keyboard.press("Escape");
   assert.deepEqual(errors, []);
+  const ios = await browser.newPage({
+    viewport: { width: 390, height: 844 },
+    userAgent: "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1",
+  });
+  await ios.goto(base);
+  await ios.getByRole("button", { name: "设置与说明", exact: true }).click();
+  await expect(ios.locator(".install-app")).toContainText("添加到主屏幕");
+  await ios.getByRole("button", { name: "English", exact: true }).click();
+  await expect(ios.locator(".install-app")).toContainText("Add to Home Screen");
+  await ios.addInitScript(() => Object.defineProperty(navigator, "standalone", { value: true }));
+  await ios.reload();
+  await ios.getByRole("button", { name: "Settings and guide", exact: true }).click();
+  await expect(ios.locator(".install-app")).toContainText("The app is installed");
+  await expect(ios.locator(".install-app")).not.toContainText("Add to Home Screen");
+  await ios.close();
   console.log(
-    "PASS: all 125 English records; themes, persistence, narration lifecycle, missing voices, reduced motion, animation pause, and seven viewports in both font sizes",
+    "PASS: all 125 English records; themes, persistence, narration lifecycle, missing voices, reduced motion, animation pause, fullscreen, simulated install outcomes, iOS guidance, and seven viewports in both font sizes",
   );
 } finally {
   await browser?.close();
