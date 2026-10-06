@@ -4,11 +4,12 @@
 
 ## 当前结论
 
-原有功能改造、本地 APK 打包、Git 初始化和 GitHub Pages 自动部署已完成。用户明确选择公开仓库后，已通过 CLI 将 `keosu/aniplanet` 设为公开并启用 Actions 模式的 Pages。首次部署成功：https://keosu.github.io/aniplanet/ 。本轮按用户要求补充 PWA 安装与离线支持，并将全屏按钮移至顶部；本地实现与验证已完成，本轮提交及部署状态见下方记录（以实际 Git / CI 为准）。
+原有功能改造、本地 APK 打包、Git 初始化和 GitHub Pages 自动部署已完成。用户明确选择公开仓库后，已通过 CLI 将 `keosu/aniplanet` 设为公开并启用 Actions 模式的 Pages。本轮 PWA 安装与离线支持、顶部全屏按钮已在 `57ffc42` 提交并推送，Pages 已成功发布并完成线上浏览器验证：https://keosu.github.io/aniplanet/ 。具体提交及验证记录见下方（以实际 Git / CI 为准）。
 
 - 当前分支：`main`。
 - 功能代码基线：`57cb4fc` — `feat: initialize Wild Atlas with bilingual explorer and Android APK CI`。
 - Pages 实现提交：`6106dfa` — `ci: deploy Wild Atlas to GitHub Pages`，已推送并成功部署；后续交接文档提交以 Git 为准。
+- 最新功能提交：`57ffc42` — `feat: add installable offline PWA and move fullscreen to header`，已推送，Pages / APK CI 均成功，线上 PWA 验证通过。
 - 首次提交包含 240 个文件。交接入口已在 `257ac8d` 提交；最新提交及工作区以 Git 为准。
 - 已配置 `origin = git@github.com:keosu/aniplanet.git`，`main` 已推送。2026-10-05 按用户授权从私有改为公开，当前 CLI 用户 `keosu` 具有管理员权限。
 - GitHub CLI 位于 `C:\Program Files\GitHub CLI\gh.exe`，版本 2.102.0，已登录；当前会话 PATH 可能没有刷新，可用完整路径调用。不要记录或输出令牌。
@@ -189,7 +190,11 @@ npm run android:apk
 - `scripts/pwa-check.mjs` 由现有 `test:pages` 调用，因此 Pages CI 自动覆盖。实际浏览器安装条件检查无错误；验证全部本地图片入缓存、断网后重新打开、此前未查看的虎照片 / 来源 / 本地 3D、真实等待中的 Service Worker 更新，以及设置和收藏保留。单独的注册失败模拟仍能使用网页摄影。
 - 更新测试临时修改 `dist/sw.js` 尾部注释并在 finally 恢复，CI 上传前已恢复；临时浏览器 profile 位于忽略的 test-results 下，验证目录后清理。
 - 边界：未在 Android / iOS 真机完成 PWA 安装；安装按钮回调与 iOS 标识测试是模拟。Android 本轮只同步网页，未重新本地打包 APK。
-- 本轮尚未提交 / 推送，后续记录实际提交、Pages CI 与线上检查结果。
+- 实现提交 `57ffc42` — `feat: add installable offline PWA and move fullscreen to header`，已推送 `main`。
+- Pages CI `37411227804`：构建、PWA 生产验证与部署均为 `success`，https://github.com/keosu/aniplanet/actions/runs/37411227804 。
+- 已使用全新、非无痕的独立 Edge 配置访问实际网站：设置页出现 1 个真实「安装到设备」按钮（未实际执行 OS 安装）；Chromium 安装条件检查无错误，Service Worker 地址 / scope 均正确；断网刷新后摄影和延迟加载的本地 3D 正常，无页面异常或 HTTP 失败。截图：`test-results/pwa-live-mobile.png`、`test-results/pwa-live-install.png`，均已目视检查。
+- Android APK CI `37411227690` 已完成，结论 `success`：功能回归、根路径构建及同步、Gradle APK / lint、校验文件及 artifact 上传均通过，https://github.com/keosu/aniplanet/actions/runs/37411227690 。存在 Gradle 生命周期和 runner 即将迁移的非阻断提示；没有在本轮无关升级工具链。这不代表 Android 真机验证。
+- 用户要求的 PWA 与顶部全屏任务已完成，没有待处理的用户任务。线上入口为「设置 → 安装应用」，首次等待约 45 MB 内容准备完成即可离线；后续更改网页仍按上述构建、同步、测试与 Pages 发布流程执行。
 
 ### Pages
 
