@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "^8.0.2",
-    "@capacitor/android": "^8.5.2",
+    "@capacitor/android": "^8.6.0",
     "@capacitor/app": "^8.1.2",
     "@capacitor/core": "^8.5.2",
-    "@capacitor/filesystem": "^8.1.4",
+    "@capacitor/filesystem": "^8.1.5",
     "@capacitor/share": "^8.0.3",
     "@sketchfab/viewer-api": "^1.12.1",
     "@vitejs/plugin-react": "latest",
@@ -35,7 +35,7 @@
     }
   },
   "devDependencies": {
-    "@capacitor/cli": "^8.5.2",
+    "@capacitor/cli": "^8.6.0",
     "@playwright/test": "^1.56.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
